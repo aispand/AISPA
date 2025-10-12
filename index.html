@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentació: Proposta de Creació del Cos d'Interventors del Sector Públic d'Andorra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-padding-top: 80px; /* Offset for the fixed nav */
+        }
+        .slide {
+            min-height: 100vh;
+            scroll-margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        .nav-link.active {
+            color: #3b82f6; /* text-blue-500 */
+            font-weight: 600;
+            border-bottom-width: 2px;
+            border-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Barra de Navegació Fixa -->
+    <nav class="bg-white/90 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <img class="h-10" src="Aispa Fons blanc retall.jpg" alt="Logo AISPA">
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#titol" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Inici</a>
+                    <a href="#aispa" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Qui Som</a>
+                    <a href="#intro" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Introducció</a>
+                    <a href="#diagnosi" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Diagnòstic</a>
+                    <a href="#proposta" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Proposta</a>
+                    <a href="#relacio-tc-1" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">TC (I)</a>
+                    <a href="#relacio-tc-2" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">TC (II)</a>
+                    <a href="#relacio-tc-3" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">TC (III)</a>
+                    <a href="#beneficis" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Beneficis</a>
+                    <a href="#passos" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Passos</a>
+                    <a href="#conclusio" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Conclusió</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-8 pt-24">
+
+        <!-- Slide 1: Títol -->
+        <section id="titol" class="slide text-center bg-white rounded-lg shadow-xl p-8 flex flex-col items-center justify-center">
+             <img class="h-24 mb-6" src="Aispa Fons blanc retall.jpg" alt="Logo AISPA">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Proposta de Creació del Cos d'Interventors del Sector Públic d'Andorra</h1>
+            <p class="text-xl md:text-2xl text-blue-700 font-light">Una Reforma Estratègica per a la Governança i l'Eficiència del Sector Públic Andorrà</p>
+        </section>
+
+        <!-- Slide 2: Qui és AISPA -->
+        <section id="aispa" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Qui Som? L'Associació d’Interventors (AISPA)</h2>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="text-lg space-y-6">
+                    <p>L'AISPA és l'associació que agrupa els professionals responsables del <span class="font-semibold text-blue-700">control intern</span> a tot el sector públic andorrà: Govern, Comuns, Consell General, CASS i altres ens públics.</p>
+                    <p>La nostra funció principal és garantir que la gestió dels fons públics s'ajusti als principis de <span class="font-semibold">legalitat, eficiència i interès general</span>, actuant com a garants de la bona gestió financera.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-center">Els Nostres Objectius Estatutaris</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"></i>
+                            <span>Vetllar pel <span class="font-semibold">bon exercici i el prestigi</span> de la professió d'interventor.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"></i>
+                            <span>Promoure la <span class="font-semibold">formació professional continuada</span> per garantir l'excel·lència tècnica.</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i data-lucide="landmark" class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"></i>
+                            <span><span class="font-semibold">Col·laborar amb les administracions</span> per al perfeccionament de la gestió pública.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Introducció i Visió -->
+        <section id="intro" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">Un Pas Decisiu per a la Modernització de l'Estat</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-lg space-y-6">
+                    <p>Aquesta proposta no és un simple ajust tècnic, sinó una <span class="font-bold text-blue-700">reforma estructural i de futur</span> per alinear Andorra amb els estàndards internacionals de bona governança, transparència i eficiència.</p>
+                    <p>La visió és establir un sistema de control intern modern, eficaç i respectat, que actuï com a <span class="font-bold">garant de la legalitat i la bona gestió financera</span> a tot el sector públic.</p>
+                    <p>L'objectiu final és enfortir la qualitat institucional, optimitzar l'ús de cada euro públic i, en darrera instància, la <span class="font-bold">confiança dels ciutadans</span> en les seves institucions.</p>
+                </div>
+                <div class="flex justify-center">
+                    <i data-lucide="building-2" class="w-32 h-32 text-blue-500"></i>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Slide 4: Diagnòstic de la Situació Actual -->
+        <section id="diagnosi" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-red-700">Diagnòstic: Per Què Cal un Canvi Radical?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-red-50 p-6 rounded-lg border border-red-200 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="unlink-2" class="w-10 h-10 text-red-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Fragmentació Crònica</h3>
+                    </div>
+                    <p class="mt-2"><b>9 centres de control</b> independents i estancs (Govern, 7 Comuns, Consell General), regulats per normatives disperses (Llei de Finances Públiques, Llei de Finances Comunals, normes pròpies).</p>
+                    <p class="mt-3 text-lg font-semibold text-red-800">Resultat: Heterogeneïtat de criteris i procediments.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-red-50 p-6 rounded-lg border border-red-200 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="shield-off" class="w-10 h-10 text-red-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Dèficit d'Independència</h3>
+                    </div>
+                    <p class="mt-2">El nomenament dels interventors depèn directament de l'autoritat política a fiscalitzar (Cap de Govern, Cònsols). La garantia de <span class="font-semibold">inamobilitat</span> és insuficient per resoldre el conflicte d'interessos inherent.</p>
+                    <p class="mt-3 text-lg font-semibold text-red-800">Resultat: "Independència condicionada" i risc d'autocensura.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-red-50 p-6 rounded-lg border border-red-200 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="copy-x" class="w-10 h-10 text-red-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Duplicitat i Ineficiència</h3>
+                    </div>
+                    <p class="mt-2">El Tribunal de Comptes no pot confiar plenament en el control intern i es veu obligat a <span class="font-semibold">repetir gran part de la feina de verificació</span>. Un control intern robust alliberaria el TC per a auditories de més alt nivell.</p>
+                     <p class="mt-3 text-lg font-semibold text-red-800">Resultat: Malbaratament de recursos públics altament qualificats.</p>
+                </div>
+                <!-- Card 4 -->
+                 <div class="bg-red-50 p-6 rounded-lg border border-red-200 transform hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="user-cog" class="w-10 h-10 text-red-600 mr-4"></i>
+                        <h3 class="text-2xl font-bold">Manca de Professionalització</h3>
+                    </div>
+                    <p class="mt-2">Absència d'un estatut professional únic. La formació, els criteris d'accés i els sistemes digitals són desiguals. No hi ha mecanismes sistèmics de <span class="font-semibold">substitució</span>, especialment a nivell comunal.</p>
+                     <p class="mt-3 text-lg font-semibold text-red-800">Resultat: Risc de paràlisi i control ineficaç.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: La Proposta -->
+        <section id="proposta" class="slide mt-8 bg-blue-50 rounded-lg shadow-xl p-8 border border-blue-200">
+            <h2 class="text-3xl font-bold text-center mb-8 text-blue-800">La Solució: Un Cos Únic, Professional i Independent</h2>
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold">Cos d'Interventors del Sector Públic d'Andorra</h3>
+                <p class="text-lg mt-2 text-gray-600">Un model inspirat en les millors pràctiques europees, adaptat a la realitat andorrana.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-200 p-5 rounded-full mb-4">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-blue-700"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">1. Independència Màxima</h4>
+                    <p class="text-base text-gray-700"><b>Adscripció orgànica al Tribunal de Comptes</b>, però amb plena autonomia funcional. Es trenca el vincle amb el poder executiu. El Cap del Cos serà elegit pels seus propis membres.</p>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-200 p-5 rounded-full mb-4">
+                        <i data-lucide="unite" class="w-12 h-12 text-blue-700"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">2. Unitat i Homogeneïtat</h4>
+                    <p class="text-base text-gray-700">Un únic cos professional amb un <b>estatut legal comú</b>. Aplicarà criteris, metodologies i normes tècniques idèntiques a tot el sector públic, garantint la coherència i la qualitat del control.</p>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-200 p-5 rounded-full mb-4">
+                        <i data-lucide="graduation-cap" class="w-12 h-12 text-blue-700"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">3. Professionalitat d'Elit</h4>
+                    <p class="text-base text-gray-700">Accés per <b>edicte públic exigent</b> (oposició) basat en el mèrit. Inclourà formació inicial selectiva i un pla de formació contínua centralitzat per garantir l'excel·lència tècnica.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Relació amb el TC (I) -->
+        <section id="relacio-tc-1" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes (I)</h2>
+            <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">Adscripció Orgànica vs. Autonomia Funcional</h3>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Adscripció Orgànica al Tribunal de Comptes</h4>
+                    <ul class="list-disc list-inside space-y-3 text-lg">
+                        <li>Garanteix la <span class="font-semibold">màxima independència</span> davant del poder polític.</li>
+                        <li>El TC gestiona l'estatut professional del Cos (accés, formació, carrera, règim disciplinari).</li>
+                        <li>Trenca definitivament el vincle jeràrquic amb l'òrgan controlat.</li>
+                    </ul>
+                    <h4 class="text-xl font-bold mt-8 mb-4">Autonomia Funcional Plena</h4>
+                     <ul class="list-disc list-inside space-y-3 text-lg">
+                        <li>Cada interventor exerceix les seves funcions de control amb <span class="font-semibold">total independència de criteri tècnic</span>.</li>
+                        <li>Ni el TC ni l'òrgan controlat poden interferir en les seves decisions o informes.</li>
+                        <li>L'interventor està físicament a l'ens que controla (Govern, Comú...), però no en depèn.</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center justify-center bg-gray-50 p-6 rounded-lg">
+                    <div class="text-center font-bold text-lg text-blue-800">TRIBUNAL DE COMPTES</div>
+                    <div class="text-sm text-gray-600 mb-2">(Garant de la Independència)</div>
+                    <i data-lucide="arrow-down" class="w-8 h-8 text-blue-400 my-2"></i>
+                    <div class="bg-blue-200 text-blue-900 font-bold p-4 rounded-lg shadow-md text-center">
+                        COS D'INTERVENTORS
+                        <div class="text-sm font-normal">(Dependència Orgànica)</div>
+                    </div>
+                     <i data-lucide="arrow-left-right" class="w-8 h-8 text-green-500 my-4"></i>
+                    <div class="text-center font-bold text-lg text-green-800">ADMINISTRACIONS PÚBLIQUES</div>
+                    <div class="text-sm text-gray-600">(Lloc d'actuació amb Autonomia Funcional)</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 7: Relació amb el TC (II) -->
+        <section id="relacio-tc-2" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes (II)</h2>
+            <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">De la Duplicitat a la Sinergia</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-red-50 border border-red-200 p-6 rounded-lg">
+                    <h4 class="text-2xl font-bold text-red-700 mb-4 text-center">Model Actual: Ineficiència</h4>
+                    <ol class="list-decimal list-inside space-y-4 text-lg">
+                        <li>Control intern <span class="font-semibold">dèbil i fragmentat</span>.</li>
+                        <li>El Tribunal de Comptes <span class="font-semibold">no pot confiar</span> en la feina prèvia.</li>
+                        <li>Es veu obligat a <span class="font-semibold text-red-800">refer la verificació</span> des de zero.</li>
+                        <li>Es malbaraten recursos i el TC té menys temps per a auditories de gestió.</li>
+                    </ol>
+                </div>
+                <div class="bg-green-50 border border-green-200 p-6 rounded-lg">
+                    <h4 class="text-2xl font-bold text-green-700 mb-4 text-center">Model Proposat: Sinergia</h4>
+                    <ol class="list-decimal list-inside space-y-4 text-lg">
+                        <li>Control intern <span class="font-semibold">robust, professional i homogeni</span>.</li>
+                        <li>El TC <span class="font-semibold">confia en el sistema</span> i en els seus resultats.</li>
+                        <li>El TC <span class="font-semibold text-green-800">audita el propi sistema de control intern</span>.</li>
+                        <li>S'alliberen recursos del TC per a auditories operatives i estratègiques de més valor afegit.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Relació amb el TC (III) -->
+        <section id="relacio-tc-3" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes (III)</h2>
+            <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">Un Ecosistema de Control: Qui Fa Què?</h3>
+            <div class="grid md:grid-cols-2 gap-8 text-lg">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="microscope" class="w-12 h-12 text-blue-600 mr-4"></i>
+                        <h4 class="text-2xl font-bold">Cos d'Interventors (Control Intern)</h4>
+                    </div>
+                    <ul class="list-disc list-inside space-y-3 mt-4">
+                        <li><b>MOMENT:</b> <span class="font-semibold">Previ i Permanent.</span> Actua durant l'exercici.</li>
+                        <li><b>FUNCIÓ CLAU:</b> <span class="font-semibold">Fiscalització prèvia</span> de legalitat i crèdit.</li>
+                        <li><b>ABAST:</b> Tota l'activitat econòmico-financera del dia a dia.</li>
+                        <li><b>OBJECTIU:</b> <span class="font-semibold">Prevenir irregularitats</span> i garantir el compliment de la normativa abans que l'acte es produeixi.</li>
+                    </ul>
+                </div>
+                 <div class="bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="telescope" class="w-12 h-12 text-blue-600 mr-4"></i>
+                        <h4 class="text-2xl font-bold">Tribunal de Comptes (Control Extern)</h4>
+                    </div>
+                    <ul class="list-disc list-inside space-y-3 mt-4">
+                        <li><b>MOMENT:</b> <span class="font-semibold">A posteriori.</span> Actua un cop tancat l'exercici.</li>
+                        <li><b>FUNCIÓ CLAU:</b> <span class="font-semibold">Judici de comptes</span> i fiscalització del Compte General.</li>
+                        <li><b>ABAST:</b> Visió global, anàlisi de la gestió i responsabilitat comptable.</li>
+                        <li><b>OBJECTIU:</b> <span class="font-semibold">Certificar la fiabilitat dels comptes</span> i avaluar l'eficiència i eficàcia de les polítiques públiques.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 9: Beneficis Clau -->
+        <section id="beneficis" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Beneficis Estratègics per a Andorra</h2>
+            <div class="space-y-8">
+                <div class="flex items-start p-6 bg-green-50 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-green-100">
+                    <i data-lucide="landmark" class="w-12 h-12 text-green-600 mr-6 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-bold">Enfortiment de la Governança i la Transparència</h3>
+                        <p class="mt-1 text-gray-700">Augmenta la confiança ciutadana i reforça l'Estat de dret. Actua com un <span class="font-semibold">poderós element dissuasiu</span> contra la mala gestió, el frau i la corrupció. Genera informació de gestió comparable i de qualitat.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-green-50 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-green-100">
+                    <i data-lucide="scaling" class="w-12 h-12 text-green-600 mr-6 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-bold">Optimització de Recursos i Eficiència</h3>
+                        <p class="mt-1 text-gray-700"><b>Elimina duplicitats</b> amb el Tribunal de Comptes. Aprofita economies d'escala (formació, tecnologia). Transforma el control en una eina d'assessorament preventiu que millora els procediments i <span class="font-semibold">aporta valor afegit</span>.</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-green-50 rounded-lg transition-all duration-300 hover:shadow-lg hover:bg-green-100">
+                     <i data-lucide="gem" class="w-12 h-12 text-green-600 mr-6 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-bold">Professionalització i Valorització del Talent</h3>
+                        <p class="mt-1 text-gray-700">Crea una carrera professional d'alt nivell que <span class="font-semibold">atrau i reté talent tècnic</span>. Fomenta un "esperit de cos" i una cultura de control basada en el rigor, l'objectivitat i l'excel·lència tècnica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 10: Passos a Seguir -->
+        <section id="passos" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Full de Ruta per a la Implementació</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Línia de temps -->
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full border-l-2 border-blue-300"></div>
+                
+                <div class="space-y-12">
+                    <!-- Punt 1 -->
+                    <div class="relative flex items-start">
+                         <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold ring-8 ring-white">1</div>
+                        <div class="pl-12 md:w-1/2 md:pr-8 md:text-right">
+                            <h3 class="font-bold text-xl text-blue-800">Fase 1: Marc Legal</h3>
+                            <p class="mt-1 text-gray-700">Aprovació d'una nova <b>Llei de Creació del Cos</b> i modificació coordinada de la normativa afectada: Llei del TC, Llei de Finances Públiques i Comunals, Llei de la Funció Pública, etc.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Punt 2 -->
+                     <div class="relative flex items-start">
+                         <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold ring-8 ring-white">2</div>
+                        <div class="pl-12 md:w-1/2 md:pl-8 md:text-left ml-auto">
+                            <h3 class="font-bold text-xl text-blue-800">Fase 2: Estructuració</h3>
+                            <p class="mt-1 text-gray-700">Desenvolupament reglamentari (organització, accés, rotació). Convocatòria del <b>primer procés selectiu</b>, preveient la integració del personal actual i places de nou accés.</p>
+                        </div>
+                    </div>
+
+                    <!-- Punt 3 -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold ring-8 ring-white">3</div>
+                        <div class="pl-12 md:w-1/2 md:pr-8 md:text-right">
+                            <h3 class="font-bold text-xl text-blue-800">Fase 3: Desplegament</h3>
+                            <p class="mt-1 text-gray-700">Elecció del primer Cap del Cos. Transferència ordenada de recursos i <b>assumpció progressiva de funcions</b> a l'Administració General, Comuns i resta d'entitats.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Punt 4 -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold ring-8 ring-white">4</div>
+                        <div class="pl-12 md:w-1/2 md:pl-8 md:text-left ml-auto">
+                            <h3 class="font-bold text-xl text-blue-800">Fase 4: Consolidació</h3>
+                            <p class="mt-1 text-gray-700">Ple funcionament del nou model. Elaboració d'un <b>primer informe d'avaluació</b> de l'impacte de la reforma i establiment d'un cicle de millora contínua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Conclusió -->
+        <section id="conclusio" class="slide mt-8 bg-blue-800 text-white rounded-lg shadow-xl p-12 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">És el Moment d'Actuar</h2>
+            <p class="text-xl md:text-2xl font-light max-w-4xl mx-auto">La creació del Cos d'Interventors no és una despesa, és una <span class="font-semibold">inversió estratègica</span> en la solvència, la transparència i el futur de les institucions andorranes. Un pas endavant decidit i visionari cap a la modernització de l'Estat.</p>
+            <p class="mt-10 text-lg">Moltes gràcies per la vostra atenció.</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 text-gray-500 text-sm">
+        <p>Presentació basada en la proposta de l'Associació d’Interventors del Sector Públic d’Andorra (AISPA).</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('section.slide');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function changeNav() {
+                let index = sections.length;
+
+                // Adjust the offset to better match when the section is "active"
+                while(--index && window.scrollY + window.innerHeight / 2 < sections[index].offsetTop) {}
+                
+                navLinks.forEach((link) => link.classList.remove('active'));
+                
+                // Add active class to the current link
+                if (navLinks[index]) {
+                    navLinks[index].classList.add('active');
+                }
+            }
+
+            changeNav();
+            window.addEventListener('scroll', changeNav);
+
+            // Smooth scroll for nav links
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
