@@ -46,6 +46,7 @@
                 <div class="flex-shrink-0">
                     <img class="h-10" src="Aispa Fons blanc retall.jpg" alt="Logo AISPA">
                 </div>
+                <!-- Menú per a escriptori -->
                 <div class="hidden md:flex items-center space-x-4">
                     <div class="flex items-center space-x-1">
                         <a href="#titol" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Inici</a>
@@ -53,22 +54,50 @@
                         <a href="#intro" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Introducció</a>
                         <a href="#diagnosi" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Diagnòstic</a>
                         <a href="#proposta" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Proposta</a>
-                        <a href="#relacio-tc-1" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Adscripció TC</a>
+                        <a href="#relacio-tc-1" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Relació TC</a>
                         <a href="#relacio-tc-2" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Sinergia TC</a>
-                        <a href="#relacio-tc-3" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Cos vs TC</a>
+                        <a href="#relacio-tc-3" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Cos vs TC </a>
                         <a href="#beneficis" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Beneficis</a>
                         <a href="#passos" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Passos</a>
                         <a href="#conclusio" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Conclusió</a>
                     </div>
-                     <!-- BOTO PDF AFEGIT A LA CAPÇALERA -->
                     <div>
                         <a href="proposta_cos.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
                             <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
-                            Veure proposta creació cos
+                            Veure PDF creació cos
                         </a>
                     </div>
-                    <!-- FI BOTO PDF -->
                 </div>
+                <!-- Botó del menú hamburguesa per a mòbil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Obrir menú principal</span>
+                        <i data-lucide="menu" class="block h-6 w-6" id="icon-menu"></i>
+                        <i data-lucide="x" class="hidden h-6 w-6" id="icon-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú desplegable per a mòbil -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#titol" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Inici</a>
+                <a href="#aispa" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Qui Som</a>
+                <a href="#intro" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Introducció</a>
+                <a href="#diagnosi" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Diagnòstic</a>
+                <a href="#proposta" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Proposta</a>
+                <a href="#relacio-tc-1" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Relació TC</a>
+                <a href="#relacio-tc-2" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Sinergia TC</a>
+                <a href="#relacio-tc-3" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Cos vs TC</a>
+                <a href="#beneficis" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Beneficis</a>
+                <a href="#passos" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Passos</a>
+                <a href="#conclusio" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Conclusió</a>
+            </div>
+            <div class="px-4 pb-4">
+                 <a href="proposta_completa.pdf" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
+                    <i data-lucide="file-text" class="w-4 h-4 mr-2 inline-block"></i>
+                    Veure PDF
+                </a>
             </div>
         </div>
     </nav>
@@ -201,7 +230,7 @@
             </div>
         </section>
 
-        <!-- Slide 6: Relació amb el TC -->
+        <!-- Slide 6: Relació amb el TC (I) -->
         <section id="relacio-tc-1" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes</h2>
             <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">Adscripció Orgànica vs. Autonomia Funcional</h3>
@@ -235,7 +264,7 @@
             </div>
         </section>
         
-        <!-- Slide 7: Relació amb el TC -->
+        <!-- Slide 7: Relació amb el TC (II) -->
         <section id="relacio-tc-2" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes</h2>
             <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">De la Duplicitat a la Sinergia</h3>
@@ -261,7 +290,7 @@
             </div>
         </section>
 
-        <!-- Slide 8: Relació amb el TC -->
+        <!-- Slide 8: Relació amb el TC (III) -->
         <section id="relacio-tc-3" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes</h2>
             <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">Un Ecosistema de Control: Qui Fa Què?</h3>
@@ -387,6 +416,28 @@
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section.slide');
             const navLinks = document.querySelectorAll('.nav-link');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconMenu = document.getElementById('icon-menu');
+            const iconClose = document.getElementById('icon-close');
+
+            // Funcionalitat del menú hamburguesa
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                iconMenu.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
+            });
+            
+            // Tancar menú mòbil al fer clic en un enllaç
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    iconMenu.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
+            });
+
 
             function changeNav() {
                 let index = sections.length;
@@ -406,7 +457,7 @@
             window.addEventListener('scroll', changeNav);
 
             // Smooth scroll for nav links
-            navLinks.forEach(anchor => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -418,3 +469,4 @@
     </script>
 </body>
 </html>
+
