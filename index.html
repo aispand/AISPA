@@ -165,28 +165,6 @@
             }
         }
         /* Nous estils per a la pàgina 'La Proposta' */
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background-color: #e5e7eb;
-        }
-        .timeline-item {
-            position: relative;
-        }
-        .timeline-dot {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 24px;
-            height: 24px;
-            border-radius: 9999px;
-            border-width: 4px;
-        }
         .accordion-item-title {
             cursor: pointer;
         }
@@ -522,95 +500,141 @@
                 </div>
             </section>
 
-            <!-- Pàgina 3: Integració al Tribunal de Comptes -->
+            <!-- Pàgina 3: Integració al TC (NOVA VERSIÓ) -->
             <section id="integracio" class="page-content">
-                 <div class="bg-white p-4 sm:p-8 rounded-xl shadow-lg mt-8">
-                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Integració al Tribunal de Comptes: La Millor Solució per a Andorra</h1>
+                 <div class="bg-slate-900 text-white">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                         <!-- Títol de la secció -->
+                        <div class="text-center mb-16">
+                            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Integració al Tribunal de Comptes</h1>
+                            <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-300">L'arquitectura institucional que garanteix una independència real i efectiva, respectant l'equilibri de poders d'Andorra.</p>
+                        </div>
+                        
+                        <!-- Esquema principal -->
+                        <div class="max-w-5xl mx-auto reveal-on-scroll">
+                             <div class="bg-slate-800 rounded-2xl p-8 md:p-12">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                                    <!-- Columna Esquerra: Entitats Controlades -->
+                                    <div class="space-y-4">
+                                        <h3 class="font-bold text-lg text-center text-slate-300">Entitats Fiscalitzades</h3>
+                                        <div class="bg-slate-700 p-4 rounded-lg text-center"><p>Govern</p></div>
+                                        <div class="bg-slate-700 p-4 rounded-lg text-center"><p>Comuns</p></div>
+                                        <div class="bg-slate-700 p-4 rounded-lg text-center"><p>Parapúbliques</p></div>
+                                    </div>
+                                    <!-- Columna Central: El nou model -->
+                                    <div class="text-center space-y-6">
+                                        <div class="border-2 border-blue-500 border-dashed rounded-lg p-6 relative">
+                                            <span class="absolute -top-3 bg-blue-500 text-white px-3 py-1 text-sm font-bold rounded-full">NOU MODEL</span>
+                                            <h4 class="font-bold text-xl">Cos d'Interventors</h4>
+                                            <p class="text-sm text-slate-300 mt-1">Control Intern</p>
+                                            <p class="mt-4 text-xs bg-green-500 text-green-900 font-bold py-1 px-2 rounded-full inline-block">INDEPENDÈNCIA FUNCIONAL</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p class="text-sm font-semibold text-slate-400">Adscripció Orgànica</p>
+                                            <svg class="w-8 h-8 mx-auto text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" /></svg>
+                                        </div>
+                                        <div class="border-2 border-slate-500 border-dashed rounded-lg p-6">
+                                             <h4 class="font-bold text-xl">Tribunal de Comptes</h4>
+                                             <p class="text-sm text-slate-300 mt-1">Control Extern</p>
+                                        </div>
+                                    </div>
+                                     <!-- Columna Dreta: Explicació -->
+                                     <div class="space-y-4 text-sm text-slate-300 bg-slate-700/50 p-6 rounded-lg">
+                                        <p><strong class="text-white">Per què funciona?</strong> Aquesta estructura <strong class="text-white">desvincula totalment</strong> el nomenament i la carrera dels interventors del poder executiu (Govern i Comuns).</p>
+                                        <p>El Cos actua amb <strong class="text-white">autonomia plena</strong>, però la seva adscripció al TC (vinculat al Consell General) el situa en un espai de <strong class="text-white">neutralitat institucional</strong>, respectant l'autonomia comunal.</p>
+                                     </div>
+                                </div>
+                             </div>
+                        </div>
 
-                    <div class="prose max-w-none text-gray-700 space-y-6">
-                        <p>La clau per garantir la independència i eficàcia del nou Cos rau en un model d'adscripció innovador que combina la màxima autonomia amb una col·laboració estratègica. Aquesta arquitectura institucional és la solució òptima per a les particularitats del Principat.</p>
-                        
-                        <h2 class="text-2xl font-semibold text-gray-800">Estructura: Adscripció Orgànica amb Autonomia Funcional</h2>
-                        <p>Es proposa que el nou Cos estigui <strong>adscrit orgànicament al Tribunal de Comptes (TC), però sense dependència jeràrquica ni funcional</strong>. Aquesta adscripció es concep com un vincle administratiu per a la gestió de recursos, preservant la plena autonomia de cada institució en les seves funcions.</p>
-                        <ul class="list-disc list-inside space-y-2">
-                           <li><strong>Com funciona?</strong> El Cos d'Interventors tindria personalitat jurídica pròpia. La sua adscripció al TC serviria per a la gestió coordinada de recursos (pressupost, personal, formació), però en cap cas implicaria una subordinació. Aquesta separació garanteix que el control intern (Cos) i el control extern (TC) es mantinguin com a funcions diferenciades.</li>
-                           <li><strong>Òrgan de Cogovernança:</strong> Es crearia una <strong>Comissió de Gestió i Coordinació</strong>, un òrgan mixt amb membres del TC i del Cos d'Interventors, per aprovar el pressupost compartit, definir plans de formació i coordinar els programes de fiscalització per evitar duplicitats.</li>
-                           <li><strong>Direcció del Cos:</strong> Per trencar amb la designació política, el màxim responsable del Cos (Cap d'Intervenció) seria elegit directament pels seus membres.</li>
-                        </ul>
-                        
-                        <h2 class="text-2xl font-semibold text-gray-800">Per què és la millor solució per a Andorra?</h2>
-                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                            <p class="text-blue-900">Aquesta arquitectura híbrida garanteix la màxima independència en desvincular el Cos de l'esfera d'influència dels poders executius (Govern i Comuns). Al mateix temps, respecta escrupolosament l'equilibri institucional del país i l'autonomia financera comunal, un pilar de la nostra organització territorial. L'adscripció al TC, òrgan vinculat al Consell General, situa el Cos en un espai de <strong>neutralitat institucional</strong>.</p>
-                        </div>
-                        
-                        <h2 class="text-2xl font-semibold text-gray-800">Beneficis i Impactes de la Reforma</h2>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-                            <!-- Benefici 1 -->
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <h3 class="font-semibold text-lg text-gray-900 mb-2">Enfortiment de la Governança</h3>
-                                <p>Un sistema de control independent és un pilar de l'Estat de dret. Actua com un element dissuasiu contra la mala gestió, el frau i la corrupció, augmentant la transparència i la confiança dels ciutadans en les institucions.</p>
-                            </div>
-                            <!-- Benefici 2 -->
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <h3 class="font-semibold text-lg text-gray-900 mb-2">Optimització de Recursos</h3>
-                                <p>S'eliminen duplicitats entre control intern i extern, permetent un estalvi de temps i recursos. La centralització aprofita economies d'escala en formació, tecnologia i serveis, reduint costos i augmentant la qualitat.</p>
-                            </div>
-                            <!-- Benefici 3 -->
-                            <div class="bg-gray-100 p-6 rounded-lg">
-                                <h3 class="font-semibold text-lg text-gray-900 mb-2">Professionalització i Talent</h3>
-                                <p>Es crea una carrera d'elit dins de l'administració, atractiva per al talent tècnic. Fomenta una cultura professional comuna basada en el rigor i l'excel·lència, superant l'aïllament de l'estructura actual.</p>
+                        <!-- Beneficis -->
+                        <div class="mt-24">
+                            <h2 class="text-3xl font-bold text-center mb-12">Principals Beneficis d'Aquesta Estructura</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg">
+                                    <svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                                    <h3 class="font-bold text-xl mt-4">Màxima Independència</h3>
+                                    <p class="text-slate-300 mt-2">Elimina qualsevol conflicte d'interessos i reforça l'objectivitat del control intern.</p>
+                                </div>
+                                <div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg" style="transition-delay: 200ms;">
+                                     <svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m3-4h2m-2-4h2m-2 8h2" /></svg>
+                                    <h3 class="font-bold text-xl mt-4">Respecte Institucional</h3>
+                                    <p class="text-slate-300 mt-2">El model no interfereix en l'autonomia financera dels Comuns, un pilar de l'organització territorial d'Andorra.</p>
+                                </div>
+                                 <div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg" style="transition-delay: 400ms;">
+                                    <svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                    <h3 class="font-bold text-xl mt-4">Eficiència Sistèmica</h3>
+                                    <p class="text-slate-300 mt-2">La coordinació entre control intern (Cos) i extern (TC) elimina duplicitats i permet optimitzar recursos.</p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                </div>
+                 </div>
             </section>
 
-            <!-- Pàgina 4: Passos a Seguir -->
+            <!-- Pàgina 4: Passos a seguir (NOVA VERSIÓ) -->
             <section id="passos" class="page-content">
-                <div class="bg-white p-4 sm:p-8 rounded-xl shadow-lg mt-8">
-                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Passos a Seguir per a la Implementació</h1>
-                    
-                    <div>
-                        <p class="text-lg text-gray-600 mb-8">La transformació del model de control intern requereix una voluntat política decidida i un full de ruta clar i ordenat. A continuació es presenta un conjunt de recomanacions concretes per a la materialització de la proposta.</p>
-                        
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Desenvolupament Legislatiu</h2>
-                        <p class="mb-6">La via més adequada és l'aprovació d'una nova <strong>Llei de Creació del Cos d'Interventors del Sector Públic d'Andorra</strong>, acompanyada de les modificacions necessàries en la legislació vigent per garantir la coherència de l'ordenament jurídic. Caldrà modificar, entre d'altres, la Llei del Tribunal de Comptes, la Llei general de les finances públiques i la Llei de les finances comunals.</p>
+                <div class="bg-white">
+                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                        <!-- Títol -->
+                        <div class="text-center mb-16">
+                            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">El Full de Ruta cap a la Reforma</h1>
+                            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Una implementació ordenada i per fases per garantir una transició eficaç i sense interrupcions per a l'Administració.</p>
+                        </div>
 
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Full de Ruta per Fases</h2>
-                        <ol class="relative border-l border-gray-200">                  
-                            <li class="mb-10 ml-6">            
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-4 ring-8 ring-white">
-                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 12a1 1 0 01-2 0V9a1 1 0 012 0v3zm2-1a1 1 0 01-1-1V9a1 1 0 112 0v1a1 1 0 01-1 1z"></path></svg>
-                                </span>
-                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">Fase 1: Aprovació del Marc Legal</h3>
-                                <p class="block mb-2 text-sm font-normal leading-none text-gray-500">Diàleg polític i tècnic</p>
-                                <p class="text-base font-normal text-gray-600">Presentació de la proposta, redacció dels avantprojectes de llei i nomenament d'una comissió gestora per pilotar la transició.</p>
-                            </li>
-                            <li class="mb-10 ml-6">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-4 ring-8 ring-white">
-                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 12a1 1 0 01-2 0V9a1 1 0 012 0v3zm2-1a1 1 0 01-1-1V9a1 1 0 112 0v1a1 1 0 01-1 1z"></path></svg>
-                                </span>
-                                <h3 class="mb-1 text-lg font-semibold text-gray-900">Fase 2: Estructuració del Cos</h3>
-                                <p class="block mb-2 text-sm font-normal leading-none text-gray-500">Desenvolupament reglamentari</p>
-                                <p class="text-base font-normal text-gray-600">Aprovació de reglaments, convocatòria del primer procés selectiu (preveient la integració del personal actual) i realització del curs de formació.</p>
-                            </li>
-                            <li class="mb-10 ml-6">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-4 ring-8 ring-white">
-                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 12a1 1 0 01-2 0V9a1 1 0 012 0v3zm2-1a1 1 0 01-1-1V9a1 1 0 112 0v1a1 1 0 01-1 1z"></path></svg>
-                                </span>
-                                <h3 class="mb-1 text-lg font-semibold text-gray-900">Fase 3: Desplegament Operatiu</h3>
-                                <p class="block mb-2 text-sm font-normal leading-none text-gray-500">Implementació progressiva</p>
-                                <p class="text-base font-normal text-gray-600">Elecció del primer Cap del Cos, transferència de recursos i assumpció de les funcions de control a tot el sector públic de manera ordenada.</p>
-                            </li>
-                            <li class="ml-6">
-                                <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-4 ring-8 ring-white">
-                                    <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 12a1 1 0 01-2 0V9a1 1 0 012 0v3zm2-1a1 1 0 01-1-1V9a1 1 0 112 0v1a1 1 0 01-1 1z"></path></svg>
-                                </span>
-                                <h3 class="mb-1 text-lg font-semibold text-gray-900">Fase 4: Consolidació i Millora</h3>
-                                <p class="block mb-2 text-sm font-normal leading-none text-gray-500">Avaluació contínua</p>
-                                <p class="text-base font-normal text-gray-600">Ple funcionament del nou model. Elaboració d'informes d'avaluació de l'impacte de la reforma per establir un cicle de millora contínua.</p>
-                            </li>
-                        </ol>
+                        <!-- Secció Lleis -->
+                        <div class="max-w-5xl mx-auto reveal-on-scroll">
+                             <h2 class="text-3xl font-bold text-center text-gray-900">1. Desenvolupament Legislatiu</h2>
+                             <p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">La creació del nou Cos exigeix una intervenció legislativa de primer nivell, creant una nova llei fundacional i modificant de manera coordinada la normativa vigent.</p>
+                             <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei del Tribunal de Comptes</p></div>
+                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de finances públiques</p></div>
+                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de finances comunals</p></div>
+                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de la funció pública</p></div>
+                             </div>
+                        </div>
+
+                        <!-- Timeline -->
+                        <div class="mt-24">
+                            <h2 class="text-3xl font-bold text-center text-gray-900">2. Implementació per Fases</h2>
+                            <div class="mt-12 max-w-5xl mx-auto">
+                                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12">
+                                    <!-- Fase 1 -->
+                                    <div class="text-center reveal-on-scroll">
+                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+                                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                        </div>
+                                        <h3 class="mt-4 font-bold text-lg">Fase 1: Marc Legal</h3>
+                                        <p class="mt-1 text-sm text-gray-600">Diàleg polític, redacció de lleis i creació de la comissió gestora de la transició.</p>
+                                    </div>
+                                    <!-- Fase 2 -->
+                                    <div class="text-center reveal-on-scroll" style="transition-delay: 200ms;">
+                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+                                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                        </div>
+                                        <h3 class="mt-4 font-bold text-lg">Fase 2: Estructuració</h3>
+                                        <p class="mt-1 text-sm text-gray-600">Aprovació de reglaments, primer procés selectiu (amb via d'integració) i formació inicial.</p>
+                                    </div>
+                                     <!-- Fase 3 -->
+                                    <div class="text-center reveal-on-scroll" style="transition-delay: 400ms;">
+                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+                                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                        </div>
+                                        <h3 class="mt-4 font-bold text-lg">Fase 3: Desplegament</h3>
+                                        <p class="mt-1 text-sm text-gray-600">Elecció del primer Cap del Cos, transferència de recursos i assumpció progressiva de funcions.</p>
+                                    </div>
+                                    <!-- Fase 4 -->
+                                    <div class="text-center reveal-on-scroll" style="transition-delay: 600ms;">
+                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+                                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                        </div>
+                                        <h3 class="mt-4 font-bold text-lg">Fase 4: Consolidació</h3>
+                                        <p class="mt-1 text-sm text-gray-600">Ple funcionament, avaluació de l'impacte de la reforma i establiment d'un cicle de millora contínua.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -684,7 +708,7 @@
                     const isPageLink = link.classList.contains('nav-link') || link.classList.contains('mobile-nav-link') || link.classList.contains('page-link-button');
                     const isScrollLink = link.classList.contains('scroll-link') || link.classList.contains('scroll-down-indicator') || link.classList.contains('scroll-down-indicator-static');
 
-                    if (isPageLink && targetElement.classList.contains('page-content')) {
+                    if (isPageLink && targetElement && targetElement.classList.contains('page-content')) {
                         if (window.location.hash === targetHash) return;
 
                         if (history.pushState) {
