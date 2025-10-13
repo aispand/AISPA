@@ -61,11 +61,15 @@
                         <a href="#passos" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Passos</a>
                         <a href="#conclusio" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Conclusió</a>
                     </div>
-                    <div>
+                    <div class="flex items-center space-x-2">
                         <a href="proposta_cos.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
                             <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
                             Veure PDF creació cos
                         </a>
+                        <button id="play-audio-button" title="Escoltar àudio" class="p-2 rounded-md bg-gray-200 hover:bg-gray-300 text-gray-700 transition-colors duration-200 shadow-sm">
+                            <i data-lucide="play" class="w-4 h-4" id="play-icon"></i>
+                            <i data-lucide="pause" class="w-4 h-4 hidden" id="pause-icon"></i>
+                        </button>
                     </div>
                 </div>
                 <!-- Botó del menú hamburguesa per a mòbil -->
@@ -93,11 +97,16 @@
                 <a href="#passos" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Passos</a>
                 <a href="#conclusio" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Conclusió</a>
             </div>
-            <div class="px-4 pb-4">
-                 <a href="proposta_completa.pdf" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
+            <div class="px-4 pb-4 space-y-2">
+                 <a href="proposta_cos.pdf" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
                     <i data-lucide="file-text" class="w-4 h-4 mr-2 inline-block"></i>
-                    Veure PDF
+                    Veure PDF creació cos
                 </a>
+                <button id="play-audio-button-mobile" class="w-full flex items-center justify-center bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-md hover:bg-gray-300 transition-colors duration-200 text-sm shadow-sm">
+                    <i data-lucide="play" class="w-4 h-4 mr-2" id="play-icon-mobile"></i>
+                    <i data-lucide="pause" class="w-4 h-4 mr-2 hidden" id="pause-icon-mobile"></i>
+                    <span>Escoltar Àudio</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -410,6 +419,9 @@
         <p>Presentació basada en la proposta de l'Associació d’Interventors del Sector Públic d’Andorra (AISPA).</p>
     </footer>
 
+    <!-- Element d'àudio -->
+    <audio id="presentacio-audio" src="https://drive.google.com/uc?export=download&id=1P8e9ysKp74Tf3z7kSXMY-fAnt8RXVyvk"></audio>
+
     <script>
         lucide.createIcons();
 
@@ -420,6 +432,44 @@
             const mobileMenu = document.getElementById('mobile-menu');
             const iconMenu = document.getElementById('icon-menu');
             const iconClose = document.getElementById('icon-close');
+
+            // --- CODI PER L'ÀUDIO ---
+            const audio = document.getElementById('presentacio-audio');
+            const playButton = document.getElementById('play-audio-button');
+            const playButtonMobile = document.getElementById('play-audio-button-mobile');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+            const playIconMobile = document.getElementById('play-icon-mobile');
+            const pauseIconMobile = document.getElementById('pause-icon-mobile');
+
+            function togglePlay() {
+                if (audio.paused) {
+                    audio.play().catch(e => console.error("Error en reproduir l'àudio:", e));
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                    playIconMobile.classList.add('hidden');
+                    pauseIconMobile.classList.remove('hidden');
+                } else {
+                    audio.pause();
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                    playIconMobile.classList.remove('hidden');
+                    pauseIconMobile.classList.add('hidden');
+                }
+            }
+
+            if(playButton && playButtonMobile && audio) {
+                playButton.addEventListener('click', togglePlay);
+                playButtonMobile.addEventListener('click', togglePlay);
+
+                audio.addEventListener('ended', () => {
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                    playIconMobile.classList.remove('hidden');
+                    pauseIconMobile.classList.add('hidden');
+                });
+            }
+            // --- FI CODI PER L'ÀUDIO ---
 
             // Funcionalitat del menú hamburguesa
             mobileMenuButton.addEventListener('click', () => {
