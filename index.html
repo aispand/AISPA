@@ -29,6 +29,12 @@
             padding-top: 4rem;
             padding-bottom: 4rem;
         }
+        /* Style for the single long slide */
+        .long-slide {
+            min-height: auto; /* Allow content to define height */
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
         .nav-link.active {
             color: #3b82f6; /* text-blue-500 */
             font-weight: 600;
@@ -50,23 +56,21 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <div class="flex items-center space-x-1">
                         <a href="#titol" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Inici</a>
-                        <a href="#aispa" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">AISPA</a>
+                        <a href="#aispa" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Qui Som</a>
                         <a href="#intro" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Introducció</a>
                         <a href="#diagnosi" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Diagnòstic</a>
                         <a href="#proposta" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Proposta</a>
-                        <a href="#relacio-tc-1" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Relació TC</a>
-                        <a href="#relacio-tc-2" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Sinergia TC</a>
-                        <a href="#relacio-tc-3" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Cos vs TC </a>
+                        <a href="#relacio-tc" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Relació TC</a>
                         <a href="#beneficis" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Beneficis</a>
                         <a href="#passos" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Passos</a>
                         <a href="#conclusio" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-500 rounded-md text-sm font-medium transition-colors duration-200">Conclusió</a>
                     </div>
+                    <!-- BOTONS ALINEATS HORIZONTALMENT -->
                     <div class="flex items-center space-x-2">
-                        <a href="proposta_cos.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
+                        <a href="proposta_cos.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 text-sm shadow-sm">
                             <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
-                            creació cos
+                            Veure PDF creació cos
                         </a>
-                        <!-- REPRODUCTOR D'ÀUDIO INCRUSTAT -->
                         <iframe src="https://drive.google.com/file/d/1P8e9ysKp74Tf3z7kSXMY-fAnt8RXVyvk/preview" width="280" height="48" allow="autoplay" class="rounded-md border border-gray-200"></iframe>
                     </div>
                 </div>
@@ -84,13 +88,11 @@
         <div class="hidden md:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#titol" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Inici</a>
-                <a href="#aispa" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">AISPA</a>
+                <a href="#aispa" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Qui Som</a>
                 <a href="#intro" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Introducció</a>
                 <a href="#diagnosi" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Diagnòstic</a>
                 <a href="#proposta" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Proposta</a>
-                <a href="#relacio-tc-1" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Relació TC</a>
-                <a href="#relacio-tc-2" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Sinergia TC</a>
-                <a href="#relacio-tc-3" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Cos vs TC</a>
+                <a href="#relacio-tc" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Relació TC</a>
                 <a href="#beneficis" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Beneficis</a>
                 <a href="#passos" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Passos</a>
                 <a href="#conclusio" class="nav-link mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50">Conclusió</a>
@@ -100,7 +102,6 @@
                     <i data-lucide="file-text" class="w-4 h-4 mr-2 inline-block"></i>
                     Veure PDF creació cos
                 </a>
-                 <!-- REPRODUCTOR D'ÀUDIO INCRUSTAT PER A MÒBIL -->
                 <iframe src="https://drive.google.com/file/d/1P8e9ysKp74Tf3z7kSXMY-fAnt8RXVyvk/preview" width="100%" height="48" allow="autoplay" class="rounded-md border border-gray-200 w-full"></iframe>
             </div>
         </div>
@@ -234,99 +235,101 @@
             </div>
         </section>
 
-        <!-- Slide 6: Relació amb el TC (I) -->
-        <section id="relacio-tc-1" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes</h2>
-            <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">Adscripció Orgànica vs. Autonomia Funcional</h3>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h4 class="text-xl font-bold mb-4">Adscripció Orgànica al Tribunal de Comptes</h4>
-                    <ul class="list-disc list-inside space-y-3 text-lg">
-                        <li>Garanteix la <span class="font-semibold">màxima independència</span> davant del poder polític.</li>
-                        <li>El TC gestiona l'estatut professional del Cos (accés, formació, carrera, règim disciplinari).</li>
-                        <li>Trenca definitivament el vincle jeràrquic amb l'òrgan controlat.</li>
-                    </ul>
-                    <h4 class="text-xl font-bold mt-8 mb-4">Autonomia Funcional Plena</h4>
-                     <ul class="list-disc list-inside space-y-3 text-lg">
-                        <li>Cada interventor exerceix les seves funcions de control amb <span class="font-semibold">total independència de criteri tècnic</span>.</li>
-                        <li>Ni el TC ni l'òrgan controlat poden interferir en les seves decisions o informes.</li>
-                        <li>L'interventor està físicament a l'ens que controla (Govern, Comú...), però no en depèn.</li>
-                    </ul>
-                </div>
-                <div class="flex flex-col items-center justify-center bg-gray-50 p-6 rounded-lg">
-                    <div class="text-center font-bold text-lg text-blue-800">TRIBUNAL DE COMPTES</div>
-                    <div class="text-sm text-gray-600 mb-2">(Garant de la Independència)</div>
-                    <i data-lucide="arrow-down" class="w-8 h-8 text-blue-400 my-2"></i>
-                    <div class="bg-blue-200 text-blue-900 font-bold p-4 rounded-lg shadow-md text-center">
-                        COS D'INTERVENTORS
-                        <div class="text-sm font-normal">(Dependència Orgànica)</div>
+        <!-- Slide 6: Relació amb el TC (Unificada) -->
+        <section id="relacio-tc" class="long-slide mt-8 bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">La Relació amb el Tribunal de Comptes: Un Ecosistema de Control</h2>
+            
+            <!-- Part 1: Adscripció Orgànica vs. Autonomia Funcional -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">1. Adscripció Orgànica vs. Autonomia Funcional</h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Adscripció Orgànica al Tribunal de Comptes</h4>
+                        <ul class="list-disc list-inside space-y-3 text-lg">
+                            <li>Garanteix la <span class="font-semibold">màxima independència</span> davant del poder polític.</li>
+                            <li>El TC gestiona l'estatut professional del Cos (accés, formació, carrera, règim disciplinari).</li>
+                            <li>Trenca definitivament el vincle jeràrquic amb l'òrgan controlat.</li>
+                        </ul>
+                        <h4 class="text-xl font-bold mt-8 mb-4">Autonomia Funcional Plena</h4>
+                         <ul class="list-disc list-inside space-y-3 text-lg">
+                            <li>Cada interventor exerceix les seves funcions de control amb <span class="font-semibold">total independència de criteri tècnic</span>.</li>
+                            <li>Ni el TC ni l'òrgan controlat poden interferir en les seves decisions o informes.</li>
+                            <li>L'interventor està físicament a l'ens que controla (Govern, Comú...), però no en depèn.</li>
+                        </ul>
                     </div>
-                     <i data-lucide="arrow-left-right" class="w-8 h-8 text-green-500 my-4"></i>
-                    <div class="text-center font-bold text-lg text-green-800">ADMINISTRACIONS PÚBLIQUES</div>
-                    <div class="text-sm text-gray-600">(Lloc d'actuació amb Autonomia Funcional)</div>
+                    <div class="flex flex-col items-center justify-center bg-gray-50 p-6 rounded-lg">
+                        <div class="text-center font-bold text-lg text-blue-800">TRIBUNAL DE COMPTES</div>
+                        <div class="text-sm text-gray-600 mb-2">(Garant de la Independència)</div>
+                        <i data-lucide="arrow-down" class="w-8 h-8 text-blue-400 my-2"></i>
+                        <div class="bg-blue-200 text-blue-900 font-bold p-4 rounded-lg shadow-md text-center">
+                            COS D'INTERVENTORS
+                            <div class="text-sm font-normal">(Dependència Orgànica)</div>
+                        </div>
+                         <i data-lucide="arrow-left-right" class="w-8 h-8 text-green-500 my-4"></i>
+                        <div class="text-center font-bold text-lg text-green-800">ADMINISTRACIONS PÚBLIQUES</div>
+                        <div class="text-sm text-gray-600">(Lloc d'actuació amb Autonomia Funcional)</div>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Slide 7: Relació amb el TC (II) -->
-        <section id="relacio-tc-2" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes</h2>
-            <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">De la Duplicitat a la Sinergia</h3>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-red-50 border border-red-200 p-6 rounded-lg">
-                    <h4 class="text-2xl font-bold text-red-700 mb-4 text-center">Model Actual: Ineficiència</h4>
-                    <ol class="list-decimal list-inside space-y-4 text-lg">
-                        <li>Control intern <span class="font-semibold">dèbil i fragmentat</span>.</li>
-                        <li>El Tribunal de Comptes <span class="font-semibold">no pot confiar</span> en la feina prèvia.</li>
-                        <li>Es veu obligat a <span class="font-semibold text-red-800">refer la verificació</span> des de zero.</li>
-                        <li>Es malbaraten recursos i el TC té menys temps per a auditories de gestió.</li>
-                    </ol>
-                </div>
-                <div class="bg-green-50 border border-green-200 p-6 rounded-lg">
-                    <h4 class="text-2xl font-bold text-green-700 mb-4 text-center">Model Proposat: Sinergia</h4>
-                    <ol class="list-decimal list-inside space-y-4 text-lg">
-                        <li>Control intern <span class="font-semibold">robust, professional i homogeni</span>.</li>
-                        <li>El TC <span class="font-semibold">confia en el sistema</span> i en els seus resultats.</li>
-                        <li>El TC <span class="font-semibold text-green-800">audita el propi sistema de control intern</span>.</li>
-                        <li>S'alliberen recursos del TC per a auditories operatives i estratègiques de més valor afegit.</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
 
-        <!-- Slide 8: Relació amb el TC (III) -->
-        <section id="relacio-tc-3" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">La Relació amb el Tribunal de Comptes</h2>
-            <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">Un Ecosistema de Control: Qui Fa Què?</h3>
-            <div class="grid md:grid-cols-2 gap-8 text-lg">
-                <div class="bg-gray-100 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <i data-lucide="microscope" class="w-12 h-12 text-blue-600 mr-4"></i>
-                        <h4 class="text-2xl font-bold">Cos d'Interventors (Control Intern)</h4>
+            <!-- Part 2: De la Duplicitat a la Sinergia -->
+            <div class="mb-16">
+                 <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">2. De la Duplicitat a la Sinergia</h3>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-red-50 border border-red-200 p-6 rounded-lg">
+                        <h4 class="text-2xl font-bold text-red-700 mb-4 text-center">Model Actual: Ineficiència</h4>
+                        <ol class="list-decimal list-inside space-y-4 text-lg">
+                            <li>Control intern <span class="font-semibold">dèbil i fragmentat</span>.</li>
+                            <li>El Tribunal de Comptes <span class="font-semibold">no pot confiar</span> en la feina prèvia.</li>
+                            <li>Es veu obligat a <span class="font-semibold text-red-800">refer la verificació</span> des de zero.</li>
+                            <li>Es malbaraten recursos i el TC té menys temps per a auditories de gestió.</li>
+                        </ol>
                     </div>
-                    <ul class="list-disc list-inside space-y-3 mt-4">
-                        <li><b>MOMENT:</b> <span class="font-semibold">Previ i Permanent.</span> Actua durant l'exercici.</li>
-                        <li><b>FUNCIÓ CLAU:</b> <span class="font-semibold">Fiscalització prèvia</span> de legalitat i crèdit.</li>
-                        <li><b>ABAST:</b> Tota l'activitat econòmico-financera del dia a dia.</li>
-                        <li><b>OBJECTIU:</b> <span class="font-semibold">Prevenir irregularitats</span> i garantir el compliment de la normativa abans que l'acte es produeixi.</li>
-                    </ul>
+                    <div class="bg-green-50 border border-green-200 p-6 rounded-lg">
+                        <h4 class="text-2xl font-bold text-green-700 mb-4 text-center">Model Proposat: Sinergia</h4>
+                        <ol class="list-decimal list-inside space-y-4 text-lg">
+                            <li>Control intern <span class="font-semibold">robust, professional i homogeni</span>.</li>
+                            <li>El TC <span class="font-semibold">confia en el sistema</span> i en els seus resultats.</li>
+                            <li>El TC <span class="font-semibold text-green-800">audita el propi sistema de control intern</span>.</li>
+                            <li>S'alliberen recursos del TC per a auditories operatives i estratègiques de més valor afegit.</li>
+                        </ol>
+                    </div>
                 </div>
-                 <div class="bg-gray-100 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <i data-lucide="telescope" class="w-12 h-12 text-blue-600 mr-4"></i>
-                        <h4 class="text-2xl font-bold">Tribunal de Comptes (Control Extern)</h4>
+            </div>
+
+            <!-- Part 3: Qui Fa Què? -->
+            <div>
+                <h3 class="text-2xl font-semibold text-center mb-10 text-blue-700">3. Un Ecosistema de Control: Qui Fa Què?</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-lg">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="microscope" class="w-12 h-12 text-blue-600 mr-4"></i>
+                            <h4 class="text-2xl font-bold">Cos d'Interventors (Control Intern)</h4>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 mt-4">
+                            <li><b>MOMENT:</b> <span class="font-semibold">Previ i Permanent.</span> Actua durant l'exercici.</li>
+                            <li><b>FUNCIÓ CLAU:</b> <span class="font-semibold">Fiscalització prèvia</span> de legalitat i crèdit.</li>
+                            <li><b>ABAST:</b> Tota l'activitat econòmico-financera del dia a dia.</li>
+                            <li><b>OBJECTIU:</b> <span class="font-semibold">Prevenir irregularitats</span> i garantir el compliment de la normativa abans que l'acte es produeixi.</li>
+                        </ul>
                     </div>
-                    <ul class="list-disc list-inside space-y-3 mt-4">
-                        <li><b>MOMENT:</b> <span class="font-semibold">A posteriori.</span> Actua un cop tancat l'exercici.</li>
-                        <li><b>FUNCIÓ CLAU:</b> <span class="font-semibold">Judici de comptes</span> i fiscalització del Compte General.</li>
-                        <li><b>ABAST:</b> Visió global, anàlisi de la gestió i responsabilitat comptable.</li>
-                        <li><b>OBJECTIU:</b> <span class="font-semibold">Certificar la fiabilitat dels comptes</span> i avaluar l'eficiència i eficàcia de les polítiques públiques.</li>
-                    </ul>
+                     <div class="bg-gray-100 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <i data-lucide="telescope" class="w-12 h-12 text-blue-600 mr-4"></i>
+                            <h4 class="text-2xl font-bold">Tribunal de Comptes (Control Extern)</h4>
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 mt-4">
+                            <li><b>MOMENT:</b> <span class="font-semibold">A posteriori.</span> Actua un cop tancat l'exercici.</li>
+                            <li><b>FUNCIÓ CLAU:</b> <span class="font-semibold">Judici de comptes</span> i fiscalització del Compte General.</li>
+                            <li><b>ABAST:</b> Visió global, anàlisi de la gestió i responsabilitat comptable.</li>
+                            <li><b>OBJECTIU:</b> <span class="font-semibold">Certificar la fiabilitat dels comptes</span> i avaluar l'eficiència i eficàcia de les polítiques públiques.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <!-- Slide 9: Beneficis Clau -->
+        <!-- Slide 7: Beneficis Clau -->
         <section id="beneficis" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
             <h2 class="text-3xl font-bold text-center mb-12 text-green-700">Beneficis Estratègics per a Andorra</h2>
             <div class="space-y-8">
@@ -354,7 +357,7 @@
             </div>
         </section>
         
-        <!-- Slide 10: Passos a Seguir -->
+        <!-- Slide 8: Passos a Seguir -->
         <section id="passos" class="slide mt-8 bg-white rounded-lg shadow-xl p-8">
             <h2 class="text-3xl font-bold text-center mb-12">Full de Ruta per a la Implementació</h2>
             <div class="relative max-w-4xl mx-auto">
@@ -401,7 +404,7 @@
             </div>
         </section>
 
-        <!-- Slide 11: Conclusió -->
+        <!-- Slide 9: Conclusió -->
         <section id="conclusio" class="slide mt-8 bg-blue-800 text-white rounded-lg shadow-xl p-12 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">La creació del Cos d'Interventors és una inversió estratègica en la solvència, la transparència i el futur de les institucions andorranes.</p></p>Un pas endavant decidit i visionari cap a la modernització de l'Estat.</h2>
             <p class="text-xl md:text-2xl font-light max-w-4xl mx-auto"></p>
@@ -418,7 +421,7 @@
         lucide.createIcons();
 
         document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('section.slide');
+            const sections = document.querySelectorAll('section.slide, section.long-slide');
             const navLinks = document.querySelectorAll('.nav-link');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
