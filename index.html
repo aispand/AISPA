@@ -10,856 +10,867 @@
 
   gtag('config', 'G-B87NLDWNYT');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposta de Creació del Cos d'Interventors del Sector Públic d'Andorra</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Estil per al menú actiu */
-        .nav-link.active {
-            color: #2563eb;
-            font-weight: 600;
-            border-bottom: 2px solid #2563eb;
-        }
-        .mobile-nav-link.active {
-            background-color: #e0f2fe;
-            color: #0c4a6e;
-            font-weight: 600;
-        }
-        /* Transicions suaus de pàgina */
-        .page-content {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        .page-content.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Estils per a la nova Home */
-        #home-hero {
-            position: relative;
-            overflow: hidden;
-        }
-        #hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
-            transform: translateX(-50%) translateY(-50%);
-            object-fit: cover;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(10, 25, 47, 0.7);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta de Creació del Cos d'Interventors del Sector Públic d'Andorra</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+/* Estil per al menú actiu */
+.nav-link.active {
+color: #2563eb;
+font-weight: 600;
+border-bottom: 2px solid #2563eb;
+}
+.mobile-nav-link.active {
+background-color: #e0f2fe;
+color: #0c4a6e;
+font-weight: 600;
+}
+/* Transicions suaus de pàgina */
+.page-content {
+display: none;
+animation: fadeIn 0.5s ease-in-out;
+}
+.page-content.active {
+display: block;
+}
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
 
-        /* Carrusel de paraules */
-        .carousel-word-container {
-            display: inline-block;
-            position: relative;
-            text-align: left;
-            width: 280px; /* Ajusta segons la paraula més llarga */
-            height: 60px; /* Ajusta segons l'alçada del text */
-        }
-        .carousel-word {
-            position: absolute;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            left: 0;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #3b82f6, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .carousel-word.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Estils per a la nova Home */
+#home-hero {
+position: relative;
+overflow: hidden;
+}
+#hero-video {
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: 0;
+transform: translateX(-50%) translateY(-50%);
+object-fit: cover;
+}
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(10, 25, 47, 0.7);
+z-index: 1;
+}
+.hero-content {
+position: relative;
+z-index: 2;
+}
 
-        /* Animacions de scroll per a les cartes */
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .reveal-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Carrusel de paraules */
+.carousel-word-container {
+display: inline-block;
+position: relative;
+text-align: left;
+width: 280px; /* Ajusta segons la paraula més llarga */
+height: 60px; /* Ajusta segons l'alçada del text */
+}
+.carousel-word {
+position: absolute;
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+left: 0;
+}
+.gradient-text {
+background: linear-gradient(45deg, #3b82f6, #818cf8);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.carousel-word.active {
+opacity: 1;
+transform: translateY(0);
+}
 
-        /* Fletxes de Scroll Animades */
-        .scroll-down-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            cursor: pointer;
-        }
-        .scroll-down-indicator svg {
-            width: 32px;
-            height: 32px;
-            color: rgba(255, 255, 255, 0.6);
-            transition: color 0.3s, transform 0.3s;
-            animation: arrow-illuminate 1.8s infinite ease-in-out;
-        }
-        .scroll-down-indicator:hover svg {
-            color: white;
-        }
-        .scroll-down-indicator svg:nth-child(1) {
-            animation-delay: 0.4s;
-        }
-        .scroll-down-indicator svg:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .scroll-down-indicator svg:nth-child(3) {
-            animation-delay: 0s;
-        }
+/* Animacions de scroll per a les cartes */
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-on-scroll.is-visible {
+opacity: 1;
+transform: translateY(0);
+}
 
-        .scroll-down-indicator-static svg {
-             width: 32px;
-            height: 32px;
-            color: rgba(107, 114, 128, 0.6);
-            transition: color 0.3s, transform 0.3s;
-            animation: arrow-illuminate 1.8s infinite ease-in-out;
-        }
-        .scroll-down-indicator-static:hover svg {
-            color: #1f2937;
-        }
-         .scroll-down-indicator-static svg:nth-child(1) {
-            animation-delay: 0.4s;
-        }
-        .scroll-down-indicator-static svg:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        .scroll-down-indicator-static svg:nth-child(3) {
-            animation-delay: 0s;
-        }
+/* Fletxes de Scroll Animades */
+.scroll-down-indicator {
+position: absolute;
+bottom: 2rem;
+left: 50%;
+transform: translateX(-50%);
+z-index: 2;
+cursor: pointer;
+}
+.scroll-down-indicator svg {
+width: 32px;
+height: 32px;
+color: rgba(255, 255, 255, 0.6);
+transition: color 0.3s, transform 0.3s;
+animation: arrow-illuminate 1.8s infinite ease-in-out;
+}
+.scroll-down-indicator:hover svg {
+color: white;
+}
+.scroll-down-indicator svg:nth-child(1) {
+animation-delay: 0.4s;
+}
+.scroll-down-indicator svg:nth-child(2) {
+animation-delay: 0.2s;
+}
+.scroll-down-indicator svg:nth-child(3) {
+animation-delay: 0s;
+}
+
+.scroll-down-indicator-static svg {
+width: 32px;
+height: 32px;
+color: rgba(107, 114, 128, 0.6);
+transition: color 0.3s, transform 0.3s;
+animation: arrow-illuminate 1.8s infinite ease-in-out;
+}
+.scroll-down-indicator-static:hover svg {
+color: #1f2937;
+}
+.scroll-down-indicator-static svg:nth-child(1) {
+animation-delay: 0.4s;
+}
+.scroll-down-indicator-static svg:nth-child(2) {
+animation-delay: 0.2s;
+}
+.scroll-down-indicator-static svg:nth-child(3) {
+animation-delay: 0s;
+}
 
 
-        @keyframes arrow-illuminate {
-            0%, 100% {
-                opacity: 0.2;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-        /* Nous estils per a la pàgina 'La Proposta' */
-        .accordion-item-title {
-            cursor: pointer;
-        }
-        .accordion-item-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
-    </style>
+@keyframes arrow-illuminate {
+0%, 100% {
+opacity: 0.2;
+}
+50% {
+opacity: 1;
+}
+}
+/* Nous estils per a la pàgina 'La Proposta' */
+.accordion-item-title {
+cursor: pointer;
+}
+.accordion-item-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease-in-out;
+}
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <div class="min-h-screen flex flex-col">
-        <!-- Header -->
-        <header class="bg-white shadow-md sticky top-0 z-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20">
-                    <!-- Logo -->
-                    <div class="flex-shrink-0">
-                        <a href="#home" class="page-link-button flex items-center gap-4 text-gray-800">
-                            <!-- Bloc Esquerra: Logo + Subtítol -->
-                            <div>
-                                <img class="h-12 w-auto" src="Aispa Fons blanc retall.jpg" alt="Logo AISPA">
-                            </div>
-                        </a>
-                    </div>
+<div class="min-h-screen flex flex-col">
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex-shrink-0">
+<a href="#home" class="page-link-button flex items-center gap-4 text-gray-800">
+<!-- Bloc Esquerra: Logo + Subtítol -->
+<div>
+<img class="h-12 w-auto" src="Aispa Fons blanc retall.jpg" alt="Logo AISPA">
+</div>
+</a>
+</div>
 
-                    <!-- Menú de navegació i botons per a escriptori -->
-                    <div class="hidden md:flex items-center">
-                        <nav class="flex items-center space-x-8">
-                            <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">Inici</a>
-                            <a href="#proposta" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">La Proposta</a>
-                            <a href="#integracio" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">Integració al TC</a>
-                            <a href="#passos" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">Passos a Seguir</a>
-                        </nav>
-                        <div class="ml-8 flex items-center space-x-3 border-l pl-6 border-gray-200">
-                             <a href="#podcast-section" class="scroll-link bg-slate-800 text-white hover:bg-slate-700 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 shadow-sm">Podcast</a>
-                             <a href="#pdf-section" class="scroll-link bg-slate-800 text-white hover:bg-slate-700 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 shadow-sm">PDF</a>
-                        </div>
-                    </div>
+<!-- Menú de navegació i botons per a escriptori -->
+<div class="hidden md:flex items-center">
+<nav class="flex items-center space-x-8">
+<a href="#home" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">Inici</a>
+<a href="#proposta" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">La Proposta</a>
+<a href="#integracio" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">Integració al TC</a>
+<a href="#passos" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-md font-medium transition duration-150 ease-in-out">Passos a Seguir</a>
+</nav>
+<div class="ml-8 flex items-center space-x-3 border-l pl-6 border-gray-200">
+<a href="#podcast-section" class="scroll-link bg-slate-800 text-white hover:bg-slate-700 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 shadow-sm">Podcast</a>
+<a href="#pdf-section" class="scroll-link bg-slate-800 text-white hover:bg-slate-700 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 shadow-sm">PDF</a>
+</div>
+</div>
 
 
-                    <!-- Botó Hamburguesa per a mòbil -->
-                    <div class="md:hidden">
-                        <button id="hamburger-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                            <span class="sr-only">Obrir menú principal</span>
-                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path id="hamburger-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                                <path id="hamburger-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+<!-- Botó Hamburguesa per a mòbil -->
+<div class="md:hidden">
+<button id="hamburger-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+<span class="sr-only">Obrir menú principal</span>
+<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+<path id="hamburger-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+<path id="hamburger-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
 
-            <!-- Menú desplegable per a mòbil -->
-            <div id="mobile-menu" class="md:hidden hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#home" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Inici</a>
-                    <a href="#proposta" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">La Proposta</a>
-                    <a href="#integracio" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Integració al TC</a>
-                    <a href="#passos" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Passos a Seguir</a>
-                     <div class="border-t border-gray-200 my-2"></div>
-                    <a href="#podcast-section" class="scroll-link mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Podcast</a>
-                    <a href="#pdf-section" class="scroll-link mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">PDF</a>
-                </div>
-            </div>
-        </header>
+<!-- Menú desplegable per a mòbil -->
+<div id="mobile-menu" class="md:hidden hidden">
+<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+<a href="#home" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Inici</a>
+<a href="#proposta" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">La Proposta</a>
+<a href="#integracio" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Integració al TC</a>
+<a href="#passos" class="mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Passos a Seguir</a>
+<div class="border-t border-gray-200 my-2"></div>
+<a href="#podcast-section" class="scroll-link mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">Podcast</a>
+<a href="#pdf-section" class="scroll-link mobile-nav-link block text-gray-700 hover:bg-blue-50 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium">PDF</a>
+</div>
+</div>
+</header>
 
-        <!-- Contingut principal -->
-        <main class="flex-grow">
-            <!-- Pàgina 1: Inici (NOVA VERSIÓ) -->
-            <section id="home" class="page-content">
-                <!-- Hero Section amb Vídeo -->
-                <div id="home-hero" class="w-full text-white">
-                    <video id="hero-video" autoplay loop muted playsinline>
-                        <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-winding-road-in-the-mountains-42207-large.mp4" type="video/mp4">
-                        El teu navegador no suporta vídeos HTML5.
-                    </video>
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center text-center" style="height: calc(100vh - 80px);">
-                        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-                            Una Reforma Estratègica per a Andorra
-                        </h1>
-                        <h2 class="mt-4 text-3xl md:text-5xl font-bold text-gray-300">
-                            Cap a un futur més <span class="carousel-word-container"><span id="carousel-word" class="carousel-word gradient-text"></span></span>
-                        </h2>
-                        <p class="mt-6 max-w-3xl text-lg md:text-xl text-gray-300">
-                           <span class="text-3xl md:text-5xl font-bold gradient-text">Cos d'Interventors:</span> una aposta clau per alinear el país amb els estàndards més exigents de bona governança i eficiència.
-                        </p>
-                        <!-- Fletxa de Scroll Animada -->
-                        <a href="#preview-section" class="scroll-down-indicator" aria-label="Desplaça't avall">
-                             <div class="flex flex-col items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="-mt-4">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="-mt-4">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+<!-- Contingut principal -->
+<main class="flex-grow">
+<!-- Pàgina 1: Inici (NOVA VERSIÓ) -->
+<section id="home" class="page-content">
+<!-- Hero Section amb Vídeo -->
+<div id="home-hero" class="w-full text-white">
+<video id="hero-video" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-winding-road-in-the-mountains-42207-large.mp4" type="video/mp4">
+El teu navegador no suporta vídeos HTML5.
+</video>
+<div class="hero-overlay"></div>
+<div class="hero-content container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center text-center" style="height: calc(100vh - 80px);">
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+Una Reforma Estratègica per a Andorra
+</h1>
+<h2 class="mt-4 text-3xl md:text-5xl font-bold text-gray-300">
+Cap a un futur més <span class="carousel-word-container"><span id="carousel-word" class="carousel-word gradient-text"></span></span>
+</h2>
+<p class="mt-6 max-w-3xl text-lg md:text-xl text-gray-300">
+<span class="text-3xl md:text-5xl font-bold gradient-text">Cos d'Interventors:</span> una aposta clau per alinear el país amb els estàndards més exigents de bona governança i eficiència.
+</p>
+<!-- Fletxa de Scroll Animada -->
+<a href="#preview-section" class="scroll-down-indicator" aria-label="Desplaça't avall">
+<div class="flex flex-col items-center">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="-mt-4">
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="-mt-4">
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+</div>
+</a>
+</div>
+</div>
 
-                <!-- Secció de Previsualització de Pàgines -->
-                <div id="preview-section" class="bg-white py-16 sm:py-24">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="text-center mb-12">
-                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Una Visió en Tres Eixos Fonamentals</h2>
-                            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Cada secció detalla un aspecte crucial de la reforma. Fes clic a les targetes per explorar-les.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <!-- Card 1: La Proposta -->
-                            <div class="reveal-on-scroll text-center flex flex-col items-center">
-                                <img src="https://placehold.co/600x400/dbeafe/3b82f6?text=Visió" alt="Visió de la Proposta" class="rounded-lg shadow-lg mb-6 w-full">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">La Proposta</h3>
-                                <p class="text-gray-600 mb-4">Descobreix la visió, els principis i l'estatut professional del nou Cos d'Interventors.</p>
-                                <a href="#proposta" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Saber-ne més &rarr;</a>
-                            </div>
-                            <!-- Card 2: Integració al TC -->
-                            <div class="reveal-on-scroll text-center flex flex-col items-center" style="transition-delay: 200ms;">
-                                <img src="https://placehold.co/600x400/e0e7ff/4338ca?text=Estructura" alt="Estructura i Independència" class="rounded-lg shadow-lg mb-6 w-full">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Integració al TC</h3>
-                                <p class="text-gray-600 mb-4">Analitzem per què l'adscripció al Tribunal de Comptes és la clau per a la independència.</p>
-                                <a href="#integracio" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Saber-ne més &rarr;</a>
-                            </div>
-                            <!-- Card 3: Passos a Seguir -->
-                            <div class="reveal-on-scroll text-center flex flex-col items-center" style="transition-delay: 400ms;">
-                                <img src="https://placehold.co/600x400/c7d2fe/4f46e5?text=Futur" alt="Full de Ruta" class="rounded-lg shadow-lg mb-6 w-full">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Passos a Seguir</h3>
-                                <p class="text-gray-600 mb-4">El full de ruta detallat per a una implementació ordenada i eficaç de la reforma.</p>
-                                <a href="#passos" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Saber-ne més &rarr;</a>
-                            </div>
-                        </div>
-                        <!-- Secció Multimèdia i Descàrrega -->
-                <div id="multimedia-section" class="bg-gray-50 py-16 sm:py-24">
-                     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            <div id="podcast-section" class="reveal-on-scroll">
-                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Podcast de la Proposta</h3>
-                                 <p class="text-gray-600 mb-4">Submergeix-te en els detalls de la reforma amb la nostra explicació en format àudio.</p>
-                                 <div class="w-full h-24 rounded-lg overflow-hidden shadow-lg">
-                                    <iframe src="https://drive.google.com/file/d/1P8e9ysKp74Tf3z7kSXMY-fAnt8RXVyvk/preview" width="100%" height="100%"></iframe>
-                                </div>
-                            </div>
-                            <div id="pdf-section" class="reveal-on-scroll text-center md:text-left" style="transition-delay: 200ms;">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Documents Oficials</h3>
-                                <p class="text-gray-600 mb-6">Consulta la proposta completa de creació del Cos i els estatuts de l'associació.</p>
-                                <div class="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start">
-                                    <a href="Proposta_cos.pdf" target="_blank" class="inline-flex items-center justify-center bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-900 transition duration-300 shadow-md">
-                                        <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" /><path fill-rule="evenodd" d="M.458 10C3.732 5.943 7.523 4.5 10 4.5s6.268 1.443 9.542 5.5c.422.628.422 1.372 0 2C16.268 14.057 12.477 15.5 10 15.5s-6.268-1.443-9.542-5.5a1.25 1.25 0 010-2zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" /></svg>
-                                        <span>Proposta</span>
-                                    </a>
-                                    <a href="estatuts segell govern.pdf" target="_blank" class="inline-flex items-center justify-center bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-900 transition duration-300 shadow-md">
+<!-- Secció de Previsualització de Pàgines -->
+<div id="preview-section" class="bg-white py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900">Una Visió en Tres Eixos Fonamentals</h2>
+<p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Cada secció detalla un aspecte crucial de la reforma. Fes clic a les targetes per explorar-les.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: La Proposta -->
+<div class="reveal-on-scroll text-center flex flex-col items-center">
+<img src="https://placehold.co/600x400/dbeafe/3b82f6?text=Visió" alt="Visió de la Proposta" class="rounded-lg shadow-lg mb-6 w-full">
+<h3 class="text-2xl font-bold text-gray-900 mb-2">La Proposta</h3>
+<p class="text-gray-600 mb-4">Descobreix la visió, els principis i l'estatut professional del nou Cos d'Interventors.</p>
+<a href="#proposta" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Saber-ne més &rarr;</a>
+</div>
+<!-- Card 2: Integració al TC -->
+<div class="reveal-on-scroll text-center flex flex-col items-center" style="transition-delay: 200ms;">
+<img src="https://placehold.co/600x400/e0e7ff/4338ca?text=Estructura" alt="Estructura i Independència" class="rounded-lg shadow-lg mb-6 w-full">
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Integració al TC</h3>
+<p class="text-gray-600 mb-4">Analitzem per què l'adscripció al Tribunal de Comptes és la clau per a la independència.</p>
+<a href="#integracio" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Saber-ne més &rarr;</a>
+</div>
+<!-- Card 3: Passos a Seguir -->
+<div class="reveal-on-scroll text-center flex flex-col items-center" style="transition-delay: 400ms;">
+<img src="https://placehold.co/600x400/c7d2fe/4f46e5?text=Futur" alt="Full de Ruta" class="rounded-lg shadow-lg mb-6 w-full">
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Passos a Seguir</h3>
+<p class="text-gray-600 mb-4">El full de ruta detallat per a una implementació ordenada i eficaç de la reforma.</p>
+<a href="#passos" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Saber-ne més &rarr;</a>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<a href="#multimedia-section" class="scroll-link" aria-label="Desplaça't avall">
+<div class="scroll-down-indicator-static flex flex-col items-center">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="-mt-4">
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="-mt-4">
+<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+</svg>
+</div>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Secció Multimèdia i Descàrrega -->
+<div id="multimedia-section" class="bg-gray-50 py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div id="podcast-section" class="reveal-on-scroll">
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Escolta el Podcast de la Proposta</h3>
+<p class="text-gray-600 mb-4">Submergeix-te en els detalls de la reforma amb la nostra explicació en format àudio.</p>
+<div class="w-full h-24 rounded-lg overflow-hidden shadow-lg">
+<iframe src="https://drive.google.com/file/d/1P8e9ysKp74Tf3z7kSXMY-fAnt8RXVyvk/preview" width="100%" height="100%"></iframe>
+</div>
+</div>
+<div id="pdf-section" class="reveal-on-scroll text-center md:text-left" style="transition-delay: 200ms;">
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Documents</h3>
+<p class="text-gray-600 mb-6">Consulta la proposta completa de creació del Cos i els estatuts de l'associació.</p>
+<a href="Proposta_cos.pdf" target="_blank" class="inline-flex items-center justify-center bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-900 transition duration-300 shadow-md">
+<svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" /><path fill-rule="evenodd" d="M.458 10C3.732 5.943 7.523 4.5 10 4.5s6.268 1.443 9.542 5.5c.422.628.422 1.372 0 2C16.268 14.057 12.477 15.5 10 15.5s-6.268-1.443-9.542-5.5a1.25 1.25 0 010-2zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" /></svg>
+<span>Proposta</span>
+</a>
+<a href="estatuts segell govern.pdf" target="_blank" class="inline-flex items-center justify-center bg-gray-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-gray-900 transition duration-300 shadow-md">
                                         <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd" /></svg>
                                         <span>Estatuts</span>
                                     </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-               
-                </div>
-            </section>
+<!-- Pàgina 2: La Proposta (NOVA VERSIÓ) -->
+<section id="proposta" class="page-content">
+<div class="bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+<!-- Títol de la secció -->
+<div class="text-center mb-16">
+<h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">La Visió de la Reforma</h1>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Un camí clar des dels reptes actuals cap a un model de control modern, eficient i independent.</p>
+</div>
 
-            <!-- Pàgina 2: La Proposta (NOVA VERSIÓ) -->
-            <section id="proposta" class="page-content">
-                <div class="bg-white">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                        <!-- Títol de la secció -->
-                        <div class="text-center mb-16">
-                            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">La Visió de la Reforma</h1>
-                            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Un camí clar des dels reptes actuals cap a un model de control modern, eficient i independent.</p>
-                        </div>
+<!-- Secció Comparativa: Problemes vs Solucions -->
+<div class="space-y-16">
+<!-- Grup 1: Fragmentació -> Cohesió -->
+<div class="reveal-on-scroll">
+<div class="flex items-center justify-center">
+<span class="inline-flex items-center rounded-full bg-red-100 px-6 py-2 text-lg font-semibold text-red-800 ring-1 ring-inset ring-red-200">
+<svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 10.5V6.75a4.5 4.5 0 119 0v3.75M13.5 10.5V10.5a4.5 4.5 0 11-9 0V10.5" /></svg>
+D'ON VENIM: Fragmentació
+</span>
+</div>
+<p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">Un sistema de 9 centres de control aïllats, cadascun amb els seus criteris, eines i recursos limitats, provocant ineficiències i qualitat desigual.</p>
+<div class="my-8 flex justify-center">
+<svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" /></svg>
+</div>
+<div class="flex items-center justify-center">
+<span class="inline-flex items-center rounded-full bg-green-100 px-6 py-2 text-lg font-semibold text-green-800 ring-1 ring-inset ring-green-200">
+<svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>
+ON ANEM: Un Cos Únic i Cohesionat
+</span>
+</div>
+<div class="mt-6 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Homogeneïtzació</h4><p class="text-sm text-gray-600 mt-1">Criteris de fiscalització unificats per garantir equitat i seguretat jurídica.</p></div>
+<div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Sinergies en Eines</h4><p class="text-sm text-gray-600 mt-1">Centralització de software i papers de treball per estalviar costos i ser més eficients.</p></div>
+<div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Cultura d'Equip</h4><p class="text-sm text-gray-600 mt-1">Fomentar l'ajuda mútua i l'intercanvi de coneixement per trencar l'aïllament.</p></div>
+</div>
+</div>
+<div class="w-1/2 mx-auto border-t border-gray-200"></div>
+<!-- Grup 2: Dependència -> Independència -->
+<div class="reveal-on-scroll">
+<div class="flex items-center justify-center">
+<span class="inline-flex items-center rounded-full bg-red-100 px-6 py-2 text-lg font-semibold text-red-800 ring-1 ring-inset ring-red-200">
+<svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 10.5V6.75a4.5 4.5 0 119 0v3.75M13.5 10.5V10.5a4.5 4.5 0 11-9 0V10.5" /></svg>
+D'ON VENIM: Dèficit d'Independència
+</span>
+</div>
+<p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">Un interventor nomenat per qui ha de fiscalitzar se sent limitat, generant desconfiança i duplicitat de controls externs.</p>
+<div class="my-8 flex justify-center">
+<svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" /></svg>
+</div>
+<div class="flex items-center justify-center">
+<span class="inline-flex items-center rounded-full bg-green-100 px-6 py-2 text-lg font-semibold text-green-800 ring-1 ring-inset ring-green-200">
+<svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+ON ANEM: Independència i Valor Afegit
+</span>
+</div>
+<div class="mt-6 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+<div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Especialització</h4><p class="text-sm text-gray-600 mt-1">Formació centralitzada per crear experts en àrees complexes (contractació, subvencions...).</p></div>
+<div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Qualitat i Confiança</h4><p class="text-sm text-gray-600 mt-1">Un control previ professional i independent genera un sistema fiable, sòlid i de qualitat.</p></div>
+<div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Optimització del TC</h4><p class="text-sm text-gray-600 mt-1">El Tribunal de Comptes pot alliberar recursos per a fiscalitzacions de més alt valor afegit.</p></div>
+</div>
+</div>
+</div>
 
-                        <!-- Secció Comparativa: Problemes vs Solucions -->
-                        <div class="space-y-16">
-                            <!-- Grup 1: Fragmentació -> Cohesió -->
-                            <div class="reveal-on-scroll">
-                                <div class="flex items-center justify-center">
-                                    <span class="inline-flex items-center rounded-full bg-red-100 px-6 py-2 text-lg font-semibold text-red-800 ring-1 ring-inset ring-red-200">
-                                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 10.5V6.75a4.5 4.5 0 119 0v3.75M13.5 10.5V10.5a4.5 4.5 0 11-9 0V10.5" /></svg>
-                                        D'ON VENIM: Fragmentació
-                                    </span>
-                                </div>
-                                <p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">Un sistema de 9 centres de control aïllats, cadascun amb els seus criteris, eines i recursos limitats, provocant ineficiències i qualitat desigual.</p>
-                                <div class="my-8 flex justify-center">
-                                    <svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" /></svg>
-                                </div>
-                                <div class="flex items-center justify-center">
-                                    <span class="inline-flex items-center rounded-full bg-green-100 px-6 py-2 text-lg font-semibold text-green-800 ring-1 ring-inset ring-green-200">
-                                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>
-                                        ON ANEM: Un Cos Únic i Cohesionat
-                                    </span>
-                                </div>
-                                <div class="mt-6 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                                    <div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Homogeneïtzació</h4><p class="text-sm text-gray-600 mt-1">Criteris de fiscalització unificats per garantir equitat i seguretat jurídica.</p></div>
-                                    <div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Sinergies en Eines</h4><p class="text-sm text-gray-600 mt-1">Centralització de software i papers de treball per estalviar costos i ser més eficients.</p></div>
-                                    <div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Cultura d'Equip</h4><p class="text-sm text-gray-600 mt-1">Fomentar l'ajuda mútua i l'intercanvi de coneixement per trencar l'aïllament.</p></div>
-                                </div>
-                            </div>
-                            <div class="w-1/2 mx-auto border-t border-gray-200"></div>
-                            <!-- Grup 2: Dependència -> Independència -->
-                            <div class="reveal-on-scroll">
-                                <div class="flex items-center justify-center">
-                                    <span class="inline-flex items-center rounded-full bg-red-100 px-6 py-2 text-lg font-semibold text-red-800 ring-1 ring-inset ring-red-200">
-                                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 10.5V6.75a4.5 4.5 0 119 0v3.75M13.5 10.5V10.5a4.5 4.5 0 11-9 0V10.5" /></svg>
-                                        D'ON VENIM: Dèficit d'Independència
-                                    </span>
-                                </div>
-                                <p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">Un interventor nomenat per qui ha de fiscalitzar se sent limitat, generant desconfiança i duplicitat de controls externs.</p>
-                                <div class="my-8 flex justify-center">
-                                    <svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13l-5 5m0 0l-5-5m5 5V6" /></svg>
-                                </div>
-                                <div class="flex items-center justify-center">
-                                    <span class="inline-flex items-center rounded-full bg-green-100 px-6 py-2 text-lg font-semibold text-green-800 ring-1 ring-inset ring-green-200">
-                                        <svg class="w-6 h-6 mr-3" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                        ON ANEM: Independència i Valor Afegit
-                                    </span>
-                                </div>
-                                <div class="mt-6 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                                    <div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Especialització</h4><p class="text-sm text-gray-600 mt-1">Formació centralitzada per crear experts en àrees complexes (contractació, subvencions...).</p></div>
-                                    <div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Qualitat i Confiança</h4><p class="text-sm text-gray-600 mt-1">Un control previ professional i independent genera un sistema fiable, sòlid i de qualitat.</p></div>
-                                    <div class="bg-gray-50 p-6 rounded-lg"><h4 class="font-semibold text-gray-800">Optimització del TC</h4><p class="text-sm text-gray-600 mt-1">El Tribunal de Comptes pot alliberar recursos per a fiscalitzacions de més alt valor afegit.</p></div>
-                                </div>
-                            </div>
-                        </div>
+<!-- Secció Funcionament Intern -->
+<div class="mt-24 pt-16 border-t">
+<div class="text-center">
+<h2 class="text-3xl font-bold text-gray-900">Funcionament Intern: Un Model Professional i Dinàmic</h2>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">El nou Cos es regeix per un estatut propi que garanteix l'excel·lència, la mobilitat i el desenvolupament constant dels seus membres.</p>
+</div>
+<div class="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
+<h4 class="font-bold text-lg text-blue-600">1. Accés per Mèrit</h4>
+<p class="mt-2 text-gray-600">L'entrada al Cos es farà exclusivament mitjançant un <strong>edicte públic</strong> rigorós, buscant els millors perfils universitaris en dret, economia i ADE.</p>
+</div>
+<div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
+<h4 class="font-bold text-lg text-blue-600">2. Formació d'Elit</h4>
+<p class="mt-2 text-gray-600">Els aprovats seran nomenats <strong>funcionaris en formació</strong> i realitzaran un curs selectiu teòric i pràctic per consolidar una base de coneixements d'alt nivell.</p>
+</div>
+<div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
+<h4 class="font-bold text-lg text-blue-600">3. Especialització Contínua</h4>
+<p class="mt-2 text-gray-600">Es promourà la formació constant per crear veritables <strong>experts</strong> en àrees clau com les <strong>NIA</strong> (Normes d'Auditoria) i les <strong>NICSP</strong> (Normes de Comptabilitat Pública).</p>
+</div>
+<div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
+<h4 class="font-bold text-lg text-blue-600">4. Carrera i Promoció</h4>
+<p class="mt-2 text-gray-600">Es definirà una carrera professional clara amb un <strong>sistema de promoció</strong> basat en criteris objectius: antiguitat, avaluació de l'acompliment i formació.</p>
+</div>
+<div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
+<h4 class="font-bold text-lg text-blue-600">5. Assignació i Rotació</h4>
+<p class="mt-2 text-gray-600">Els interventors seran <strong>assignats</strong> a les institucions però, per garantir l'objectivitat, s'establirà un <strong>sistema de rotació periòdica</strong>.</p>
+</div>
+<div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
+<h4 class="font-bold text-lg text-blue-600">6. Direcció Professional</h4>
+<p class="mt-2 text-gray-600">El <strong>Cap del Cos</strong> serà elegit directament pels seus membres, assegurant una direcció tècnica i trencant amb la designació política.</p>
+</div>
+</div>
+</div>
 
-                        <!-- Secció Funcionament Intern -->
-                        <div class="mt-24 pt-16 border-t">
-                            <div class="text-center">
-                                <h2 class="text-3xl font-bold text-gray-900">Funcionament Intern: Un Model Professional i Dinàmic</h2>
-                                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">El nou Cos es regeix per un estatut propi que garanteix l'excel·lència, la mobilitat i el desenvolupament constant dels seus membres.</p>
-                            </div>
-                            <div class="mt-12 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
-                                    <h4 class="font-bold text-lg text-blue-600">1. Accés per Mèrit</h4>
-                                    <p class="mt-2 text-gray-600">L'entrada al Cos es farà exclusivament mitjançant un <strong>edicte públic</strong> rigorós, buscant els millors perfils universitaris en dret, economia i ADE.</p>
-                                </div>
-                                <div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
-                                    <h4 class="font-bold text-lg text-blue-600">2. Formació d'Elit</h4>
-                                    <p class="mt-2 text-gray-600">Els aprovats seran nomenats <strong>funcionaris en formació</strong> i realitzaran un curs selectiu teòric i pràctic per consolidar una base de coneixements d'alt nivell.</p>
-                                </div>
-                                <div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
-                                    <h4 class="font-bold text-lg text-blue-600">3. Especialització Contínua</h4>
-                                    <p class="mt-2 text-gray-600">Es promourà la formació constant per crear veritables <strong>experts</strong> en àrees clau com les <strong>NIA</strong> (Normes d'Auditoria) i les <strong>NICSP</strong> (Normes de Comptabilitat Pública).</p>
-                                </div>
-                                <div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
-                                    <h4 class="font-bold text-lg text-blue-600">4. Carrera i Promoció</h4>
-                                    <p class="mt-2 text-gray-600">Es definirà una carrera professional clara amb un <strong>sistema de promoció</strong> basat en criteris objectius: antiguitat, avaluació de l'acompliment i formació.</p>
-                                </div>
-                                <div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
-                                    <h4 class="font-bold text-lg text-blue-600">5. Assignació i Rotació</h4>
-                                    <p class="mt-2 text-gray-600">Els interventors seran <strong>assignats</strong> a les institucions però, per garantir l'objectivitat, s'establirà un <strong>sistema de rotació periòdica</strong>.</p>
-                                </div>
-                                <div class="reveal-on-scroll bg-gray-50 p-6 rounded-lg border">
-                                    <h4 class="font-bold text-lg text-blue-600">6. Direcció Professional</h4>
-                                    <p class="mt-2 text-gray-600">El <strong>Cap del Cos</strong> serà elegit directament pels seus membres, assegurant una direcció tècnica i trencant amb la designació política.</p>
-                                </div>
-                            </div>
-                        </div>
+<!-- Secció Context Europeu -->
+<div class="mt-24 pt-16 border-t">
+<div class="text-center">
+<h2 class="text-3xl font-bold text-gray-900">Inspirats en les Millors Pràctiques Europees</h2>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">La proposta no és un experiment. S'inspira en models d'èxit consolidats a Europa, adaptant-los a l'escala i les necessitats d'Andorra.</p>
+</div>
+<div class="mt-12 max-w-4xl mx-auto">
+<div id="accordion-europe" class="space-y-4">
+<!-- Espanya -->
+<div class="accordion-item bg-gray-100 rounded-lg">
+<h3 class="accordion-item-title flex justify-between items-center p-4 font-semibold text-gray-800">
+<span>Espanya: Model Centralitzat amb Vessant Autonòmica</span>
+<svg class="w-5 h-5 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+</h3>
+<div class="accordion-item-content">
+<div class="p-4 pt-0 text-gray-600">
+<p><strong>Agrupació:</strong> El "Cuerpo Superior de Interventores y Auditores del Estado" és un cos d'elit de l'alta funció pública. <strong>Dependència:</strong> L'òrgan principal és la IGAE (Intervención General de la Administración del Estado), adscrita al Ministeri d'Hisenda, però amb una àmplia autonomia funcional.</p>
+<p class="mt-2"><strong>Particularitat:</strong> Les Comunitats Autònomes tenen els seus propis òrgans de control intern (Intervencions Generals) i extern (Tribunals de Comptes autonòmics). A Catalunya, per exemple, la <strong class="font-semibold">Sindicatura de Comptes</strong> actua com a òrgan fiscalitzador extern del sector públic català, depenent del Parlament, de manera similar a com ho fa el Tribunal de Cuentas a nivell estatal.</p>
+</div>
+</div>
+</div>
+<!-- Altres països -->
+<div class="accordion-item bg-gray-100 rounded-lg">
+<h3 class="accordion-item-title flex justify-between items-center p-4 font-semibold text-gray-800">
+<span>Altres Models Europeus de Referència</span>
+<svg class="w-5 h-5 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+</h3>
+<div class="accordion-item-content">
+<div class="p-4 pt-0 text-gray-600 space-y-3">
+<p><strong>França:</strong> L'Inspection Générale des Finances (IGF) és un servei d'inspecció interministerial de gran prestigi, adscrit al Ministre d'Economia i Finances, però amb una independència funcional molt arrelada.</p>
+<p><strong>Portugal:</strong> La Inspeção-Geral de Finanças (IGF) és el cos superior de control, depenent del Ministeri de Finances, encarregat del control estratègic i la auditoria pública.</p>
+<p><strong>Itàlia:</strong> La Ragioneria Generale dello Stato, dins del Ministeri d'Economia i Finances, exerceix el control intern. La Corte dei Conti actua com a òrgan de control extern i jurisdicció comptable.</p>
+<p><strong>Alemanya:</strong> El control intern està més descentralitzat en cada ministeri. El control extern el realitza el Bundesrechnungshof (Tribunal Federal de Comptes), un òrgan federal independent.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                        <!-- Secció Context Europeu -->
-                        <div class="mt-24 pt-16 border-t">
-                            <div class="text-center">
-                                <h2 class="text-3xl font-bold text-gray-900">Inspirats en les Millors Pràctiques Europees</h2>
-                                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">La proposta no és un experiment. S'inspira en models d'èxit consolidats a Europa, adaptant-los a l'escala i les necessitats d'Andorra.</p>
-                            </div>
-                            <div class="mt-12 max-w-4xl mx-auto">
-                                <div id="accordion-europe" class="space-y-4">
-                                    <!-- Espanya -->
-                                    <div class="accordion-item bg-gray-100 rounded-lg">
-                                        <h3 class="accordion-item-title flex justify-between items-center p-4 font-semibold text-gray-800">
-                                            <span>Espanya: Model Centralitzat amb Vessant Autonòmica</span>
-                                            <svg class="w-5 h-5 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                                        </h3>
-                                        <div class="accordion-item-content">
-                                            <div class="p-4 pt-0 text-gray-600">
-                                                <p><strong>Agrupació:</strong> El "Cuerpo Superior de Interventores y Auditores del Estado" és un cos d'elit de l'alta funció pública. <strong>Dependència:</strong> L'òrgan principal és la IGAE (Intervención General de la Administración del Estado), adscrita al Ministeri d'Hisenda, però amb una àmplia autonomia funcional.</p>
-                                                <p class="mt-2"><strong>Particularitat:</strong> Les Comunitats Autònomes tenen els seus propis òrgans de control intern (Intervencions Generals) i extern (Tribunals de Comptes autonòmics). A Catalunya, per exemple, la <strong class="font-semibold">Sindicatura de Comptes</strong> actua com a òrgan fiscalitzador extern del sector públic català, depenent del Parlament, de manera similar a com ho fa el Tribunal de Cuentas a nivell estatal.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Altres països -->
-                                    <div class="accordion-item bg-gray-100 rounded-lg">
-                                         <h3 class="accordion-item-title flex justify-between items-center p-4 font-semibold text-gray-800">
-                                            <span>Altres Models Europeus de Referència</span>
-                                            <svg class="w-5 h-5 transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                                        </h3>
-                                        <div class="accordion-item-content">
-                                            <div class="p-4 pt-0 text-gray-600 space-y-3">
-                                                <p><strong>França:</strong> L'Inspection Générale des Finances (IGF) és un servei d'inspecció interministerial de gran prestigi, adscrit al Ministre d'Economia i Finances, però amb una independència funcional molt arrelada.</p>
-                                                <p><strong>Portugal:</strong> La Inspeção-Geral de Finanças (IGF) és el cos superior de control, depenent del Ministeri de Finances, encarregat del control estratègic i la auditoria pública.</p>
-                                                <p><strong>Itàlia:</strong> La Ragioneria Generale dello Stato, dins del Ministeri d'Economia i Finances, exerceix el control intern. La Corte dei Conti actua com a òrgan de control extern i jurisdicció comptable.</p>
-                                                <p><strong>Alemanya:</strong> El control intern està més descentralitzat en cada ministeri. El control extern el realitza el Bundesrechnungshof (Tribunal Federal de Comptes), un òrgan federal independent.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- Secció Visual Integració TC -->
+<div class="mt-24 pt-16 border-t">
+<div class="text-center">
+<h2 class="text-3xl font-bold text-gray-900">La Clau: Una Adaptació Intel·ligent per a Andorra</h2>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">La nostra proposta combina el millor dels models europeus amb una solució única que garanteix la màxima independència i respecta l'equilibri institucional del país.</p>
+</div>
+<div class="mt-12 max-w-4xl mx-auto reveal-on-scroll">
+<div class="bg-slate-100 rounded-2xl p-8 md:p-12">
+<!-- Esquema Visual -->
+<div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+<!-- Box TC -->
+<div class="w-full md:w-1/3">
+<div class="bg-white rounded-lg p-4 shadow">
+<svg class="h-10 w-10 mx-auto text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+<h4 class="mt-2 font-bold text-slate-800">Tribunal de Comptes</h4>
+<p class="text-sm text-slate-500">Òrgan Superior de Control Extern</p>
+</div>
+</div>
+<!-- Connexió i Firewall -->
+<div class="w-full md:w-1/3 flex flex-col items-center">
+<!-- Fletxa Adscripció -->
+<div class="text-sm font-semibold text-slate-600 mb-1">Adscripció Orgànica</div>
+<div class="w-full border-t-2 border-slate-300 border-dashed"></div>
+<p class="text-xs text-slate-500 mt-1">Gestió de recursos compartits (pressupost, formació...)</p>
 
-                        <!-- Secció Visual Integració TC -->
-                         <div class="mt-24 pt-16 border-t">
-                             <div class="text-center">
-                                <h2 class="text-3xl font-bold text-gray-900">La Clau: Una Adaptació Intel·ligent per a Andorra</h2>
-                                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">La nostra proposta combina el millor dels models europeus amb una solució única que garanteix la màxima independència i respecta l'equilibri institucional del país.</p>
-                            </div>
-                            <div class="mt-12 max-w-4xl mx-auto reveal-on-scroll">
-                                <div class="bg-slate-100 rounded-2xl p-8 md:p-12">
-                                    <!-- Esquema Visual -->
-                                    <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-                                        <!-- Box TC -->
-                                        <div class="w-full md:w-1/3">
-                                            <div class="bg-white rounded-lg p-4 shadow">
-                                                <svg class="h-10 w-10 mx-auto text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
-                                                <h4 class="mt-2 font-bold text-slate-800">Tribunal de Comptes</h4>
-                                                <p class="text-sm text-slate-500">Òrgan Superior de Control Extern</p>
-                                            </div>
-                                        </div>
-                                        <!-- Connexió i Firewall -->
-                                        <div class="w-full md:w-1/3 flex flex-col items-center">
-                                            <!-- Fletxa Adscripció -->
-                                            <div class="text-sm font-semibold text-slate-600 mb-1">Adscripció Orgànica</div>
-                                            <div class="w-full border-t-2 border-slate-300 border-dashed"></div>
-                                            <p class="text-xs text-slate-500 mt-1">Gestió de recursos compartits (pressupost, formació...)</p>
-                                            
-                                            <!-- Firewall Independència -->
-                                            <div class="my-4 w-3/4 h-px bg-slate-300 relative">
-                                                <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                                                    <div class="w-full border-t-2 border-red-500 border-dashed"></div>
-                                                </div>
-                                                <div class="relative flex justify-center">
-                                                    <span class="bg-slate-100 px-2 text-sm font-bold text-red-600">INDEPENDÈNCIA FUNCIONAL</span>
-                                                </div>
-                                            </div>
-                                            <p class="text-xs text-slate-500">(Sense subordinació jeràrquica)</p>
-                                        </div>
-                                        <!-- Box Cos -->
-                                        <div class="w-full md:w-1/3">
-                                            <div class="bg-white rounded-lg p-4 shadow">
-                                                <svg class="h-10 w-10 mx-auto text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                                                <h4 class="mt-2 font-bold text-blue-700">Cos d'Interventors</h4>
-                                                <p class="text-sm text-slate-500">Nou Òrgan de Control Intern</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-8 text-center">
-                                         <a href="#integracio" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Explora en detall la integració &rarr;</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- Firewall Independència -->
+<div class="my-4 w-3/4 h-px bg-slate-300 relative">
+<div class="absolute inset-0 flex items-center" aria-hidden="true">
+<div class="w-full border-t-2 border-red-500 border-dashed"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="bg-slate-100 px-2 text-sm font-bold text-red-600">INDEPENDÈNCIA FUNCIONAL</span>
+</div>
+</div>
+<p class="text-xs text-slate-500">(Sense subordinació jeràrquica)</p>
+</div>
+<!-- Box Cos -->
+<div class="w-full md:w-1/3">
+<div class="bg-white rounded-lg p-4 shadow">
+<svg class="h-10 w-10 mx-auto text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+<h4 class="mt-2 font-bold text-blue-700">Cos d'Interventors</h4>
+<p class="text-sm text-slate-500">Nou Òrgan de Control Intern</p>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<a href="#integracio" class="page-link-button font-semibold text-blue-600 hover:text-blue-800 transition">Explora en detall la integració &rarr;</a>
+</div>
+</div>
+</div>
+</div>
 
-                    </div>
-                </div>
-            </section>
+</div>
+</div>
+</section>
 
-            <!-- Pàgina 3: Integració al TC (NOVA VERSIÓ) -->
-            <section id="integracio" class="page-content">
-                 <div class="bg-slate-900 text-white">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                         <!-- Títol de la secció -->
-                        <div class="text-center mb-16">
-                            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Integració al Tribunal de Comptes</h1>
-                            <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-300">L'arquitectura institucional que garanteix una independència real i efectiva, respectant l'equilibri de poders d'Andorra.</p>
-                        </div>
-                        
-                        <!-- Esquema principal -->
-                        <div class="max-w-5xl mx-auto reveal-on-scroll">
-                             <div class="bg-slate-800 rounded-2xl p-8 md:p-12">
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                                    <!-- Columna Esquerra: Entitats Controlades -->
-                                    <div class="space-y-4">
-                                        <h3 class="font-bold text-lg text-center text-slate-300">Entitats Fiscalitzades</h3>
-                                        <div class="bg-slate-700 p-4 rounded-lg text-center"><p>Govern</p></div>
-                                        <div class="bg-slate-700 p-4 rounded-lg text-center"><p>Comuns</p></div>
-                                        <div class="bg-slate-700 p-4 rounded-lg text-center"><p>Parapúbliques</p></div>
-                                    </div>
-                                    <!-- Columna Central: El nou model -->
-                                    <div class="text-center space-y-6">
-                                        <div class="border-2 border-blue-500 border-dashed rounded-lg p-6 relative">
-                                            <span class="absolute -top-3 bg-blue-500 text-white px-3 py-1 text-sm font-bold rounded-full">NOU MODEL</span>
-                                            <h4 class="font-bold text-xl">Cos d'Interventors</h4>
-                                            <p class="text-sm text-slate-300 mt-1">Control Intern</p>
-                                            <p class="mt-4 text-xs bg-green-500 text-green-900 font-bold py-1 px-2 rounded-full inline-block">INDEPENDÈNCIA FUNCIONAL</p>
-                                        </div>
-                                        <div class="text-center">
-                                            <p class="text-sm font-semibold text-slate-400">Adscripció Orgànica</p>
-                                            <svg class="w-8 h-8 mx-auto text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" /></svg>
-                                        </div>
-                                        <div class="border-2 border-slate-500 border-dashed rounded-lg p-6">
-                                             <h4 class="font-bold text-xl">Tribunal de Comptes</h4>
-                                             <p class="text-sm text-slate-300 mt-1">Control Extern</p>
-                                        </div>
-                                    </div>
-                                     <!-- Columna Dreta: Explicació -->
-                                     <div class="space-y-4 text-sm text-slate-300 bg-slate-700/50 p-6 rounded-lg">
-                                        <p><strong class="text-white">Per què funciona?</strong> Aquesta estructura <strong class="text-white">desvincula totalment</strong> el nomenament i la carrera dels interventors del poder executiu (Govern i Comuns).</p>
-                                        <p>El Cos actua amb <strong class="text-white">autonomia plena</strong>, però la seva adscripció al TC (vinculat al Consell General) el situa en un espai de <strong class="text-white">neutralitat institucional</strong>, respectant l'autonomia comunal.</p>
-                                     </div>
-                                </div>
-                             </div>
-                        </div>
+<!-- Pàgina 3: Integració al TC (NOVA VERSIÓ) -->
+<section id="integracio" class="page-content">
+<div class="bg-slate-900 text-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+<!-- Títol de la secció -->
+<div class="text-center mb-16">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Integració al Tribunal de Comptes</h1>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-slate-300">L'arquitectura institucional que garanteix una independència real i efectiva, respectant l'equilibri de poders d'Andorra.</p>
+</div>
 
-                        <!-- Beneficis -->
-                        <div class="mt-24">
-                            <h2 class="text-3xl font-bold text-center mb-12">Principals Beneficis d'Aquesta Estructura</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                <div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg">
-                                    <svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
-                                    <h3 class="font-bold text-xl mt-4">Màxima Independència</h3>
-                                    <p class="text-slate-300 mt-2">Elimina qualsevol conflicte d'interessos i reforça l'objectivitat del control intern.</p>
-                                </div>
-                                <div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg" style="transition-delay: 200ms;">
-                                     <svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m3-4h2m-2-4h2m-2 8h2" /></svg>
-                                    <h3 class="font-bold text-xl mt-4">Respecte Institucional</h3>
-                                    <p class="text-slate-300 mt-2">El model no interfereix en l'autonomia financera dels Comuns, un pilar de l'organització territorial d'Andorra.</p>
-                                </div>
-                                 <div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg" style="transition-delay: 400ms;">
-                                    <svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                    <h3 class="font-bold text-xl mt-4">Eficiència Sistèmica</h3>
-                                    <p class="text-slate-300 mt-2">La coordinació entre control intern (Cos) i extern (TC) elimina duplicitats i permet optimitzar recursos.</p>
-                                </div>
-                            </div>
-                        </div>
+<!-- Esquema principal -->
+<div class="max-w-5xl mx-auto reveal-on-scroll">
+<div class="bg-slate-800 rounded-2xl p-8 md:p-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+<!-- Columna Esquerra: Entitats Controlades -->
+<div class="space-y-4">
+<h3 class="font-bold text-lg text-center text-slate-300">Entitats Fiscalitzades</h3>
+<div class="bg-slate-700 p-4 rounded-lg text-center"><p>Govern</p></div>
+<div class="bg-slate-700 p-4 rounded-lg text-center"><p>Comuns</p></div>
+<div class="bg-slate-700 p-4 rounded-lg text-center"><p>Parapúbliques</p></div>
+</div>
+<!-- Columna Central: El nou model -->
+<div class="text-center space-y-6">
+<div class="border-2 border-blue-500 border-dashed rounded-lg p-6 relative">
+<span class="absolute -top-3 bg-blue-500 text-white px-3 py-1 text-sm font-bold rounded-full">NOU MODEL</span>
+<h4 class="font-bold text-xl">Cos d'Interventors</h4>
+<p class="text-sm text-slate-300 mt-1">Control Intern</p>
+<p class="mt-4 text-xs bg-green-500 text-green-900 font-bold py-1 px-2 rounded-full inline-block">INDEPENDÈNCIA FUNCIONAL</p>
+</div>
+<div class="text-center">
+<p class="text-sm font-semibold text-slate-400">Adscripció Orgànica</p>
+<svg class="w-8 h-8 mx-auto text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3" /></svg>
+</div>
+<div class="border-2 border-slate-500 border-dashed rounded-lg p-6">
+<h4 class="font-bold text-xl">Tribunal de Comptes</h4>
+<p class="text-sm text-slate-300 mt-1">Control Extern</p>
+</div>
+</div>
+<!-- Columna Dreta: Explicació -->
+<div class="space-y-4 text-sm text-slate-300 bg-slate-700/50 p-6 rounded-lg">
+<p><strong class="text-white">Per què funciona?</strong> Aquesta estructura <strong class="text-white">desvincula totalment</strong> el nomenament i la carrera dels interventors del poder executiu (Govern i Comuns).</p>
+<p>El Cos actua amb <strong class="text-white">autonomia plena</strong>, però la seva adscripció al TC (vinculat al Consell General) el situa en un espai de <strong class="text-white">neutralitat institucional</strong>, respectant l'autonomia comunal.</p>
+</div>
+</div>
+</div>
+</div>
 
-                    </div>
-                 </div>
-            </section>
+<!-- Beneficis -->
+<div class="mt-24">
+<h2 class="text-3xl font-bold text-center mb-12">Principals Beneficis d'Aquesta Estructura</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg">
+<svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+<h3 class="font-bold text-xl mt-4">Màxima Independència</h3>
+<p class="text-slate-300 mt-2">Elimina qualsevol conflicte d'interessos i reforça l'objectivitat del control intern.</p>
+</div>
+<div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg" style="transition-delay: 200ms;">
+<svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m-1 4h1m3-4h2m-2-4h2m-2 8h2" /></svg>
+<h3 class="font-bold text-xl mt-4">Respecte Institucional</h3>
+<p class="text-slate-300 mt-2">El model no interfereix en l'autonomia financera dels Comuns, un pilar de l'organització territorial d'Andorra.</p>
+</div>
+<div class="reveal-on-scroll bg-slate-800 p-8 rounded-lg" style="transition-delay: 400ms;">
+<svg class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+<h3 class="font-bold text-xl mt-4">Eficiència Sistèmica</h3>
+<p class="text-slate-300 mt-2">La coordinació entre control intern (Cos) i extern (TC) elimina duplicitats i permet optimitzar recursos.</p>
+</div>
+</div>
+</div>
 
-            <!-- Pàgina 4: Passos a seguir (NOVA VERSIÓ) -->
-            <section id="passos" class="page-content">
-                <div class="bg-white">
-                    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                        <!-- Títol -->
-                        <div class="text-center mb-16">
-                            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">El Full de Ruta cap a la Reforma</h1>
-                            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Una implementació ordenada i per fases per garantir una transició eficaç i sense interrupcions per a l'Administració.</p>
-                        </div>
+</div>
+</div>
+</section>
 
-                        <!-- Secció Lleis -->
-                        <div class="max-w-5xl mx-auto reveal-on-scroll">
-                             <h2 class="text-3xl font-bold text-center text-gray-900">1. Desenvolupament Legislatiu</h2>
-                             <p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">La creació del nou Cos exigeix una intervenció legislativa de primer nivell, creant una nova llei fundacional i modificant de manera coordinada la normativa vigent.</p>
-                             <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei del Tribunal de Comptes</p></div>
-                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de finances públiques</p></div>
-                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de finances comunals</p></div>
-                                 <div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de la funció pública</p></div>
-                             </div>
-                        </div>
+<!-- Pàgina 4: Passos a seguir (NOVA VERSIÓ) -->
+<section id="passos" class="page-content">
+<div class="bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+<!-- Títol -->
+<div class="text-center mb-16">
+<h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">El Full de Ruta cap a la Reforma</h1>
+<p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Una implementació ordenada i per fases per garantir una transició eficaç i sense interrupcions per a l'Administració.</p>
+</div>
 
-                        <!-- Timeline -->
-                        <div class="mt-24">
-                            <h2 class="text-3xl font-bold text-center text-gray-900">2. Implementació per Fases</h2>
-                            <div class="mt-12 max-w-5xl mx-auto">
-                                <div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12">
-                                    <!-- Fase 1 -->
-                                    <div class="text-center reveal-on-scroll">
-                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
-                                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-                                        </div>
-                                        <h3 class="mt-4 font-bold text-lg">Fase 1: Marc Legal</h3>
-                                        <p class="mt-1 text-sm text-gray-600">Diàleg polític, redacció de lleis i creació de la comissió gestora de la transició.</p>
-                                    </div>
-                                    <!-- Fase 2 -->
-                                    <div class="text-center reveal-on-scroll" style="transition-delay: 200ms;">
-                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
-                                             <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                                        </div>
-                                        <h3 class="mt-4 font-bold text-lg">Fase 2: Estructuració</h3>
-                                        <p class="mt-1 text-sm text-gray-600">Aprovació de reglaments, primer procés selectiu (amb via d'integració) i formació inicial.</p>
-                                    </div>
-                                     <!-- Fase 3 -->
-                                    <div class="text-center reveal-on-scroll" style="transition-delay: 400ms;">
-                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
-                                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                        </div>
-                                        <h3 class="mt-4 font-bold text-lg">Fase 3: Desplegament</h3>
-                                        <p class="mt-1 text-sm text-gray-600">Elecció del primer Cap del Cos, transferència de recursos i assumpció progressiva de funcions.</p>
-                                    </div>
-                                    <!-- Fase 4 -->
-                                    <div class="text-center reveal-on-scroll" style="transition-delay: 600ms;">
-                                        <div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
-                                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                        </div>
-                                        <h3 class="mt-4 font-bold text-lg">Fase 4: Consolidació</h3>
-                                        <p class="mt-1 text-sm text-gray-600">Ple funcionament, avaluació de l'impacte de la reforma i establiment d'un cicle de millora contínua.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="bg-slate-900 text-slate-300 py-8">
+<!-- Secció Lleis -->
+<div class="max-w-5xl mx-auto reveal-on-scroll">
+<h2 class="text-3xl font-bold text-center text-gray-900">1. Desenvolupament Legislatiu</h2>
+<p class="text-center max-w-2xl mx-auto mt-4 text-gray-600">La creació del nou Cos exigeix una intervenció legislativa de primer nivell, creant una nova llei fundacional i modificant de manera coordinada la normativa vigent.</p>
+<div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+<div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei del Tribunal de Comptes</p></div>
+<div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de finances públiques</p></div>
+<div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de finances comunals</p></div>
+<div class="bg-gray-100 p-4 rounded-lg"><p class="font-semibold text-sm">Llei de la funció pública</p></div>
+</div>
+</div>
+
+<!-- Timeline -->
+<div class="mt-24">
+<h2 class="text-3xl font-bold text-center text-gray-900">2. Implementació per Fases</h2>
+<div class="mt-12 max-w-5xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12">
+<!-- Fase 1 -->
+<div class="text-center reveal-on-scroll">
+<div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+</div>
+<h3 class="mt-4 font-bold text-lg">Fase 1: Marc Legal</h3>
+<p class="mt-1 text-sm text-gray-600">Diàleg polític, redacció de lleis i creació de la comissió gestora de la transició.</p>
+</div>
+<!-- Fase 2 -->
+<div class="text-center reveal-on-scroll" style="transition-delay: 200ms;">
+<div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+</div>
+<h3 class="mt-4 font-bold text-lg">Fase 2: Estructuració</h3>
+<p class="mt-1 text-sm text-gray-600">Aprovació de reglaments, primer procés selectiu (amb via d'integració) i formació inicial.</p>
+</div>
+<!-- Fase 3 -->
+<div class="text-center reveal-on-scroll" style="transition-delay: 400ms;">
+<div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+</div>
+<h3 class="mt-4 font-bold text-lg">Fase 3: Desplegament</h3>
+<p class="mt-1 text-sm text-gray-600">Elecció del primer Cap del Cos, transferència de recursos i assumpció progressiva de funcions.</p>
+</div>
+<!-- Fase 4 -->
+<div class="text-center reveal-on-scroll" style="transition-delay: 600ms;">
+<div class="mx-auto bg-blue-100 text-blue-600 rounded-full h-16 w-16 flex items-center justify-center">
+<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+</div>
+<h3 class="mt-4 font-bold text-lg">Fase 4: Consolidació</h3>
+<p class="mt-1 text-sm text-gray-600">Ple funcionament, avaluació de l'impacte de la reforma i establiment d'un cicle de millora contínua.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+ <footer class="bg-slate-900 text-slate-300 py-8">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
                 <p class="font-bold">Associació d'Interventors del Sector Públic d'Andorra</p>
                 <p class="mt-2">Carrer Mossèn Cinto Verdaguer núm. 4-6, 2a planta AD500 Andorra la Vella</p>
             </div>
         </footer>
-    </div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburgerButton = document.getElementById('hamburger-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const hamburgerOpen = document.getElementById('hamburger-open');
-            const hamburgerClose = document.getElementById('hamburger-close');
-            
-            const navLinks = document.querySelectorAll('.nav-link');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            const pages = document.querySelectorAll('.page-content');
-            const pageLinkButtons = document.querySelectorAll('.page-link-button');
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const hamburgerButton = document.getElementById('hamburger-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const hamburgerOpen = document.getElementById('hamburger-open');
+const hamburgerClose = document.getElementById('hamburger-close');
 
-            // Funció per canviar de pàgina
-            function showPage(hash, isInitialLoad = false) {
-                const targetHash = hash || '#home';
-                
-                pages.forEach(page => {
-                    page.classList.remove('active');
-                });
+const navLinks = document.querySelectorAll('.nav-link');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+const pages = document.querySelectorAll('.page-content');
+const pageLinkButtons = document.querySelectorAll('.page-link-button');
 
-                const activePage = document.querySelector(targetHash);
-                if (activePage) {
-                    activePage.classList.add('active');
-                }
-                
-                if (!isInitialLoad) {
-                     window.scrollTo(0, 0);
-                }
+// Funció per canviar de pàgina
+function showPage(hash, isInitialLoad = false) {
+const targetHash = hash || '#home';
 
-                updateActiveLink(targetHash);
-            }
-            
-            function updateActiveLink(targetHash) {
-                 navLinks.forEach(link => {
-                    if (link.getAttribute('href') === targetHash) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
+pages.forEach(page => {
+page.classList.remove('active');
+});
 
-                mobileNavLinks.forEach(link => {
-                    if (link.getAttribute('href') === targetHash) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-            }
+const activePage = document.querySelector(targetHash);
+if (activePage) {
+activePage.classList.add('active');
+}
 
-            // Esdeveniment per al botó d'hamburguesa
-            hamburgerButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                hamburgerOpen.classList.toggle('hidden');
-                hamburgerClose.classList.toggle('hidden');
-            });
+if (!isInitialLoad) {
+window.scrollTo(0, 0);
+}
 
-            const allLinks = [...document.querySelectorAll('a[href^="#"]')];
-            allLinks.forEach(link => {
-                link.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    const targetHash = link.getAttribute('href');
-                    const targetElement = document.querySelector(targetHash);
-                    
-                    const isPageLink = link.classList.contains('nav-link') || link.classList.contains('mobile-nav-link') || link.classList.contains('page-link-button');
-                    const isScrollLink = link.classList.contains('scroll-link') || link.classList.contains('scroll-down-indicator') || link.classList.contains('scroll-down-indicator-static');
+updateActiveLink(targetHash);
+}
 
-                    if (isPageLink && targetElement && targetElement.classList.contains('page-content')) {
-                        if (window.location.hash === targetHash) return;
+function updateActiveLink(targetHash) {
+navLinks.forEach(link => {
+if (link.getAttribute('href') === targetHash) {
+link.classList.add('active');
+} else {
+link.classList.remove('active');
+}
+});
 
-                        if (history.pushState) {
-                            history.pushState(null, null, targetHash);
-                        } else {
-                            location.hash = targetHash;
-                        }
-                        showPage(targetHash);
+mobileNavLinks.forEach(link => {
+if (link.getAttribute('href') === targetHash) {
+link.classList.add('active');
+} else {
+link.classList.remove('active');
+}
+});
+}
 
-                    } else if (isScrollLink) {
-                        const homePage = document.getElementById('home');
-                        if (!homePage.classList.contains('active')) {
-                            showPage('#home');
-                             if (history.pushState) {
-                                history.pushState(null, null, '#home');
-                            } else {
-                                location.hash = '#home';
-                            }
-                        }
-                        
-                        setTimeout(() => {
-                            const targetToScroll = document.querySelector(targetHash);
-                            if (targetToScroll) {
-                                targetToScroll.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        }, 50);
-                    }
-                    
-                    if (mobileMenu.offsetParent !== null) {
-                        mobileMenu.classList.add('hidden');
-                        hamburgerOpen.classList.remove('hidden');
-                        hamburgerClose.classList.add('hidden');
-                    }
-                });
-            });
+// Esdeveniment per al botó d'hamburguesa
+hamburgerButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+hamburgerOpen.classList.toggle('hidden');
+hamburgerClose.classList.toggle('hidden');
+});
+
+const allLinks = [...document.querySelectorAll('a[href^="#"]')];
+allLinks.forEach(link => {
+link.addEventListener('click', (event) => {
+event.preventDefault();
+const targetHash = link.getAttribute('href');
+const targetElement = document.querySelector(targetHash);
+
+const isPageLink = link.classList.contains('nav-link') || link.classList.contains('mobile-nav-link') || link.classList.contains('page-link-button');
+const isScrollLink = link.classList.contains('scroll-link') || link.classList.contains('scroll-down-indicator') || link.classList.contains('scroll-down-indicator-static');
+
+if (isPageLink && targetElement && targetElement.classList.contains('page-content')) {
+if (window.location.hash === targetHash) return;
+
+if (history.pushState) {
+history.pushState(null, null, targetHash);
+} else {
+location.hash = targetHash;
+}
+showPage(targetHash);
+
+} else if (isScrollLink) {
+const homePage = document.getElementById('home');
+if (!homePage.classList.contains('active')) {
+showPage('#home');
+if (history.pushState) {
+history.pushState(null, null, '#home');
+} else {
+location.hash = '#home';
+}
+}
+
+setTimeout(() => {
+const targetToScroll = document.querySelector(targetHash);
+if (targetToScroll) {
+targetToScroll.scrollIntoView({ behavior: 'smooth' });
+}
+}, 50);
+}
+
+if (mobileMenu.offsetParent !== null) {
+mobileMenu.classList.add('hidden');
+hamburgerOpen.classList.remove('hidden');
+hamburgerClose.classList.add('hidden');
+}
+});
+});
 
 
-            window.addEventListener('popstate', () => {
-                showPage(window.location.hash);
-            });
+window.addEventListener('popstate', () => {
+showPage(window.location.hash);
+});
 
-            // Lògica de l'acordió
-            const accordionItems = document.querySelectorAll('.accordion-item');
-            accordionItems.forEach(item => {
-                const title = item.querySelector('.accordion-item-title');
-                const content = item.querySelector('.accordion-item-content');
-                const icon = title.querySelector('svg');
+// Lògica de l'acordió
+const accordionItems = document.querySelectorAll('.accordion-item');
+accordionItems.forEach(item => {
+const title = item.querySelector('.accordion-item-title');
+const content = item.querySelector('.accordion-item-content');
+const icon = title.querySelector('svg');
 
-                title.addEventListener('click', () => {
-                    const isOpen = content.style.maxHeight !== '0px';
-                    
-                    // Tanca tots els altres
-                    accordionItems.forEach(otherItem => {
-                        if(otherItem !== item) {
-                            otherItem.querySelector('.accordion-item-content').style.maxHeight = '0px';
-                             otherItem.querySelector('svg').style.transform = 'rotate(0deg)';
-                        }
-                    });
+title.addEventListener('click', () => {
+const isOpen = content.style.maxHeight !== '0px';
 
-                    // Obre o tanca l'actual
-                    if (isOpen) {
-                        content.style.maxHeight = '0px';
-                        icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
-            
-            // --- Inici de la Lògica per a la Nova Home ---
-            const words = ['Transparent', 'Eficient', 'Professional', 'Independent', 'Modern', 'Segur'];
-            let wordIndex = 0;
-            const wordElement = document.getElementById('carousel-word');
+// Tanca tots els altres
+accordionItems.forEach(otherItem => {
+if(otherItem !== item) {
+otherItem.querySelector('.accordion-item-content').style.maxHeight = '0px';
+otherItem.querySelector('svg').style.transform = 'rotate(0deg)';
+}
+});
 
-            function startCarousel() {
-                if (!wordElement) return;
-                wordElement.textContent = words[0];
-                wordElement.classList.add('active');
+// Obre o tanca l'actual
+if (isOpen) {
+content.style.maxHeight = '0px';
+icon.style.transform = 'rotate(0deg)';
+} else {
+content.style.maxHeight = content.scrollHeight + 'px';
+icon.style.transform = 'rotate(180deg)';
+}
+});
+});
 
-                setInterval(() => {
-                    wordElement.classList.remove('active');
-                    setTimeout(() => {
-                        wordIndex = (wordIndex + 1) % words.length;
-                        wordElement.textContent = words[wordIndex];
-                        wordElement.classList.add('active');
-                    }, 500);
-                }, 2000);
-            }
+// --- Inici de la Lògica per a la Nova Home ---
+const words = ['Transparent', 'Eficient', 'Professional', 'Independent', 'Modern', 'Segur'];
+let wordIndex = 0;
+const wordElement = document.getElementById('carousel-word');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
+function startCarousel() {
+if (!wordElement) return;
+wordElement.textContent = words[0];
+wordElement.classList.add('active');
 
-            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
+setInterval(() => {
+wordElement.classList.remove('active');
+setTimeout(() => {
+wordIndex = (wordIndex + 1) % words.length;
+wordElement.textContent = words[wordIndex];
+wordElement.classList.add('active');
+}, 500);
+}, 2000);
+}
 
-            // Mostra la pàgina inicial en carregar
-            showPage(window.location.hash, true);
-            startCarousel();
-        });
-    </script>
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('is-visible');
+}
+});
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+observer.observe(el);
+});
+
+// Mostra la pàgina inicial en carregar
+showPage(window.location.hash, true);
+startCarousel();
+});
+</script>
 </body>
 </html>
-
